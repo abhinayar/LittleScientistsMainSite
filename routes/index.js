@@ -4,7 +4,11 @@ var router = express.Router();
 
 // setup routing
 router.get('/', function(req, res, next) {
-  res.render('base', {})
+  res.render('home', {})
+})
+
+router.get('/products', function(req, res, next) {
+  res.render('products', {})
 })
 
 // export the module

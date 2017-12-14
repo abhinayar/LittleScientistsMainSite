@@ -1,0 +1,197 @@
+extends ./base.pug
+
+append bodyContent
+  #home.barba-container.container-fluid.relative(data-namespace='home')
+    #navigation.absolute
+      .container.relative
+        .mobile-nav.hidden-md.hidden-lg
+          .nav-logo
+            a(href='/')
+              img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
+          .nav-menu.pointer.text-center
+            span.bar
+            span.bar
+            span.bar
+            span.text.c-sec.xs Menu
+          ul.nav-list.c-w.hidden
+            span.nav-close.pointer Close (Esc)
+            li.nav-item
+              a.active.nav-link(href='/') Home
+            li.nav-item
+              a.nav-link(href='/products-and-services') Products & Services
+            li.nav-item
+              a.nav-link(href='/success-stories') Success Stories
+            li.nav-item
+              a.nav-link(href='/about') About Us
+            li.nav-item
+              a.nav-link(href='#Contact') Contact Us
+            li.nav-item
+              a.nav-link(href='/login') Login
+        .desktop-nav.hidden-xs.hidden-sm
+          .nav-logo
+            a(href='/')
+              img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
+          .top-nav
+            ul.top-nav-list
+              li.top-nav-item
+                a(href='mailto:info@little-scientists.com')
+                  span.icon
+                    // TODO Insert Icon
+                  span.text info@little-scientists.com
+              li.top-nav-item.phone
+                // TODO inset tel
+                a.bold(href='tel:')
+                  span.icon
+                    // TODO Insert Icon
+                  span.text 1-800-FACT-FUN
+          .bottom-nav
+            ul.nav-list
+              li.nav-item
+                a.nav-link.active(href='/') Home
+              li.nav-item
+                a.nav-link(href='/products-and-services') Products & Services
+              li.nav-item
+                a.nav-link(href='/success-stories') Success Stories
+              li.nav-item
+                a.nav-link(href='#Contact') Contact Us
+              li.nav-item
+                a.nav-link(href='/login') Login
+    #landing.page-section.home-landing.title-left.image-right.container-fluid.bg-cover.bg-center.bg-no-repeat
+      .container
+        .row
+          .image-section.c-section-right.contained.col-xs-12.hidden-md.hidden-lg.text-center
+            .ollie-img-wrapper.img-wrapper
+              .ollie.relative.d-i-block.wow.fadeIn
+                // TODO: Insert Ollie
+                img#landing-ollie(src='/images/home/Ollie.png', alt='Ollie The Octopus')
+                img.landing-ollie-text(src='/images/home/Ollie_Text.png', alt='Ollie The Octopus')
+              .numbers
+                // TODO: Insert and animate numbers
+          .text-section.text-btns.c-section-left.col-xs-12.col-md-7.wow.fadeIn(data-wow-delay='300ms')
+            .main-text.left-text
+              h1.c-w Leaders in&nbsp;
+                span.c-sec
+                  wbr
+                  | hands-on&nbsp;
+                  wbr
+                | science for over&nbsp;
+                span.c-sec 20 years
+            .btn-wrapper.btn-line-solid
+              a.button.btn-one.bold.hover-scale.lined(href='#OurMission') Learn More
+              a.button.shadow.btn-two.bold.hover-scale.solid.bg-prim(href='#Contact') Contact Us
+          .image-section.c-section-right.contained.hidden-xs.hidden-sm.col-md-5.text-center
+            .ollie-img-wrapper.img-wrapper
+              .ollie.relative.d-i-block.wow.fadeIn
+                // TODO: Insert Ollie
+                img#landing-ollie(src='/images/home/Ollie.png', alt='Ollie The Octopus')
+                img.landing-ollie-text(src='/images/home/Ollie_Text.png', alt='Ollie The Octopus')
+              .numbers
+                // TODO: Insert and animate numbers
+      .scroll-action.c-w.hidden-xs.hidden-sm
+        +arrow(32,32)
+    #homeMission.page-section.small-section.blue.title-left.c-w
+      .container.smaller
+        .row
+          .c-section-left.main-text.col-xs-12.col-md-5.wow.fadeIn
+            h3.c-w The Little Scientists&nbsp;
+              span.c-sec.new-line Mission
+          .c-section-right.sub-text.col-xs-12.col-md-7.wow.slideInUp
+            span.text.d-i-block To empower students & teachers, through the highest quality of hands-on learning, to participate in science within the classroom and beyond.
+            .btn-wrapper.btn-solid-line
+              a.button.btn-one.hover-scale.solid.bg-sec.bold(href='/about') About Us
+              a.button.btn-two.hover-scale.lined.bold(href='/about#OurMissionDetail') Our History
+    #homeProducts.page-section.less-padding.large-section.white.title-left.link-right
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 Our&nbsp;
+                span.c-prim Products
+                span.new-line &&nbsp;
+                  span.c-sec Services
+            .link-icon
+              a.blue-link.sm(href='/products-and-services') Explore All&nbsp;
+                +arrow()
+        .row
+          .content-section.col-xs-12
+            .row.product-row.circles
+              +product('/images/products/NGSSCurriculumUnits.jpg', 'Curriculum Units', 'We were Next Gen. a Generation ago! Reach out to Ollie and friends and see why our education partners love us.', '/products/NGSSCurriculumUnits', 'Learn More', 'text-center')
+              +product('/images/products/EarlyChildhood.jpg', 'Early Childhood', 'The original basis for Little Scientists back in the mid 90’s. We haven’t stopped loving Early Childhood Hands On  Age Appropriate Science Ever Since!', '/products/EarlyChildhood', 'Learn More', 'text-center')
+              +product('/images/products/EnrichmentClasses.jpg', 'Enrichment Classes', 'We’ve been exploding volcanoes (and a lot more) in after school classrooms, <span class="hidden-sm">park and recs, </span><span class="hidden-xs hidden-md hidden-lg">and </span>home school learning<span class="hidden-xs hidden-md hidden-lg"> for a generation. </span><span class="hidden-sm">, faith-based institutions for a generation.</span>', '/products/EnrichmentClasses', 'Learn More', 'text-center')
+              +product('/images/products/InternationalLicenseeProgram.jpg', 'International Licensee Program', 'We were Next Gen. a Generation ago! Reach out to Ollie and friends and see why our education partners love us.', '/products/NGSSCurriculumUnits', 'Learn More', 'text-center')
+              +product('/images/products/ScienceSupplies.jpg', 'Science Supplies', 'Our signature lab coats and McGraw- Hill published books make us an educator favorite.', '/products/ScienceSupplies', 'Learn More', 'text-center')
+              +product('/images/products/ProfessionalDevelopment.jpg', 'Professional Development', 'Out of town? Our professional development means you don’t have to be out of mind!', '/products/ProfessionalDevelopment', 'Learn More', 'text-center')
+    #homeTestimonials.page-section.small-section.blue.title-right
+      .container.smaller
+        .row
+          .c-section-right.main-text.col-xs-12.hidden-md.hidden-lg.wow.fadeIn
+            h3.c-w What Our&nbsp;
+              span.new-line Clients Are&nbsp;
+              span.c-sec.new-line Saying
+          .c-section-left.testimonials.col-xs-12.col-md-7
+            .testimonial-wrapper.c-w
+              +testimonial(0, 'The quality of the lessons were outstanding!', '&mdash;&nbsp;&nbsp;Gary Rispoli', 'Leader, New Haven Summer Science Academy', true)
+              +testimonial(1, 'An outstanding program with superior materials and awesome instructors!', '&mdash;&nbsp;&nbsp;Jeanine Amendola', 'Teacher, New Haven, CT')
+              +testimonial(2, 'This all-inclusive program with plans and materials for every unit is a teacher’s dream. I was most impressed and surprised by the enthusiasm on both the part of the teacher and the students for the Little Scientists program.', '&mdash;&nbsp;&nbsp;Gayle McGee', 'Principal, Augusta, GA')
+              +testimonial(3, 'In the early grades, the Little Scientists® curriculum serves as a strong foundation for the integration of science and technology. I highly recommend this program.', '&mdash;&nbsp;&nbsp;Dr. Maria Diaz', 'Principal, Bronx, New York')
+              +testimonial(4, 'I have tried many other science programs; but this is the first program that the children and I enjoyed using and learning. I know the Little Scientist program will enhance and raise our science test scores.', '&mdash;&nbsp;&nbsp;Gloria Bennett', 'Veteran Teacher, Augusta, GA')
+              +testimonial(5, 'We really loved our science lessons and the many experiments that we did. This has been a great learning experience for everyone involved', '&mdash;&nbsp;&nbsp;Simone Minichino', 'Teacher, New Haven, CT')
+              +testimonial(6, 'Thank you again for helping make our science program so much better!', '&mdash;&nbsp;&nbsp;Eugene Zandri', 'Science Supervisor, Orange, CT')
+              +testimonial(7, 'Thank you for becoming part of Shepherd Glen’s After School program team. This has been the most successful program yet.', '&mdash;&nbsp;&nbsp;Mrs. Bryant', 'Shepherd Glen School, Hamden, CT')
+            .indicator-wrapper
+              span.indicator.active(data-indicator='0')
+              span.indicator(data-indicator='1')
+              span.indicator(data-indicator='2')
+              span.indicator(data-indicator='3')
+              span.indicator(data-indicator='4')
+              span.indicator(data-indicator='5')
+              span.indicator(data-indicator='6')
+              span.indicator(data-indicator='7')
+          .c-section-right.main-text.hidden-xs.hidden-sm.col-md-5.col-lg-5
+            h3.c-w What Our Clients Are&nbsp;
+              span.c-sec Saying
+    #homeTwoCol.page-section.no-padding.large-section.two-col.white
+      .container-fluid
+        .row
+          .col-xs-12.hidden-sm.hidden-md.hidden-lg
+            .image-section.bg-img.bg-center.bg-cover(data-bg='/images/home/lgImageOne.png')
+          .hidden-xs.col-sm-6.lg-img-col
+            .image-section.lg-bg-img.bg-center.bg-cover(data-bg='/images/home/lgImageOne.png')
+          .col-xs-12.col-sm-6.lg-img-text-col
+            .text-section.white.text-center
+              .icon.wow.pulse
+                svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 200 250')
+                  path#Selection(fill='#000489', d='M 84.00,19.16 C 84.00,19.16 139.00,19.16 139.00,19.16 157.89,19.03 167.97,29.11 168.00,48.00 168.00,48.00 168.00,152.00 168.00,152.00 167.97,170.89 157.89,180.97 139.00,181.00 139.00,181.00 61.00,181.00 61.00,181.00 42.11,180.97 32.03,170.89 32.00,152.00 32.00,152.00 32.00,46.00 32.00,46.00 32.17,32.21 39.45,22.69 53.00,19.16 53.00,19.16 84.00,19.16 84.00,19.16 Z M 48.21,35.21 C 42.21,41.21 44.00,53.02 44.00,61.00 44.00,61.00 44.00,127.00 44.00,127.00 44.00,127.00 44.00,148.00 44.00,148.00 44.00,151.61 43.66,156.70 45.01,160.00 46.49,163.65 49.34,166.41 53.00,167.85 56.23,169.12 59.60,168.99 63.00,169.00 63.00,169.00 137.00,169.00 137.00,169.00 151.26,168.98 155.98,164.26 156.00,150.00 156.00,150.00 156.00,48.00 156.00,48.00 155.87,37.15 151.27,31.15 140.00,31.00 140.00,31.00 126.00,31.00 126.00,31.00 125.98,37.41 125.96,42.02 120.89,46.79 116.36,51.06 112.79,50.99 107.00,51.00 95.58,51.02 79.05,54.04 74.65,40.00 73.84,37.42 74.00,33.74 74.00,31.00 66.02,31.00 54.21,29.21 48.21,35.21 Z M 86.00,31.00 C 86.00,31.00 87.60,37.98 87.60,37.98 87.60,37.98 94.00,39.00 94.00,39.00 94.00,39.00 112.40,37.98 112.40,37.98 112.40,37.98 114.00,31.00 114.00,31.00 114.00,31.00 86.00,31.00 86.00,31.00 Z M 84.00,84.00 C 86.15,84.02 88.96,83.90 90.85,85.02 94.67,87.28 94.67,92.72 90.85,94.98 88.96,96.10 86.15,95.98 84.00,95.84 84.00,95.84 61.02,95.84 61.02,95.84 55.16,94.16 55.00,88.70 59.15,85.02 64.36,83.17 77.84,83.96 84.00,84.00 Z M 84.00,128.00 C 86.15,128.02 88.96,127.90 90.85,129.02 94.67,131.28 94.67,136.72 90.85,138.98 88.96,140.10 86.15,139.98 84.00,139.84 84.00,139.84 61.02,139.84 61.02,139.84 55.16,138.16 55.00,132.70 59.15,129.02 64.36,127.17 77.84,127.96 84.00,128.00 Z')
+                  path(id='Selection #2', fill='#febd00', d='M 131.27,79.00 C 133.41,76.51 136.89,72.12 140.04,71.11 143.63,69.96 147.43,72.15 147.64,76.04 147.83,79.55 145.08,82.55 142.95,85.00 142.95,85.00 130.83,98.96 130.83,98.96 129.06,100.79 126.67,103.09 124.00,103.35 120.01,103.73 114.79,98.53 112.00,96.05 109.12,93.49 104.29,90.24 104.29,86.00 104.29,81.87 108.15,79.40 112.00,80.61 115.01,81.56 120.55,86.75 123.00,89.00 123.00,89.00 131.27,79.00 131.27,79.00 Z M 131.27,123.00 C 133.41,120.51 136.89,116.12 140.04,115.11 143.63,113.96 147.43,116.15 147.64,120.04 147.83,123.55 145.08,126.55 142.95,129.00 142.95,129.00 130.83,142.96 130.83,142.96 129.06,144.79 126.67,147.09 124.00,147.35 120.01,147.73 114.79,142.53 112.00,140.05 109.12,137.49 104.29,134.24 104.29,130.00 104.29,125.87 108.15,123.40 112.00,124.61 115.01,125.56 120.55,130.75 123.00,133.00 123.00,133.00 131.27,123.00 131.27,123.00 Z')
+              .title.c-dark.wow.fadeIn
+                span.c-sec Proven&nbsp;
+                | to increase
+                span.c-prim.new-line scientific achievment
+              .text.wow.fadeIn
+                p Little Scientists® has been extremely successful in exciting children, ages 3 through 8th grade, about the Magic of Science.
+                  br
+                  br
+                  | We have a proven track record of delivering value to our partners and schools. Find out more by reading our success stories!
+              .btn-wrapper.wow.fadeInUp
+                a.button.shadow.hover-scale.solid.bg-prim(href='/success-stories') Read Our Success Stories
+        .row
+          .col-xs-12.hidden-sm.hidden-md.hidden-lg
+            .image-section.bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImageTwo.png')
+          .col-xs-12.col-sm-6.lg-img-text-col
+            .text-section.white.text-center
+              .icon.wow.pulse
+                img(src='/images/common/logo_blue_text.png', alt='Little Scientists')
+              .title.c-dark.wow.fadeIn About&nbsp;
+                span.c-sec Little Scientists&nbsp;
+                | &
+                span.c-prim.new-line Hands-On Learning
+              .text.wow.fadeIn
+                p Little Scientists® is a "hands-on" approach to teaching science. The goal of Little Scientists® is to excite all children about the world of science.
+                  br
+                  br
+                  | We couple interactive projects, entertaining demonstrations and simple experiments with children's natural curiosity, introducing children to the thrill of scientific discovery.
+              .btn-wrapper.wow.fadeInUp
+                a.button.shadow.hover-scale.solid.bg-prim(href='/about') Learn More About Little Scientists
+          .hidden-xs.col-sm-6.lg-img-col
+            .image-section.lg-bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImageTwo.png')
+    +contactFooter()
