@@ -1,0 +1,28 @@
+extends base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='LoginNav')
+    +navigation()
+    #loginPage.page-section.large-section.top-section.blue
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-w Login To
+                span.new-line.c-sec Members Area
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12.no-padding
+            form#loginForm.bg-white.text-center.page-item.top-item(action='POST', role='form', autocomplete='on')
+              .text-section
+                span.lg.bold.c-dark Enter your password for access to the members section. For help call us at&nbsp;
+                  a.c-sec(href='tel:18003228386') 1-800-FACT-FUN&nbsp;
+                  | &nbsp;or&nbsp;
+                  a.c-sec(href='#Contact') Contact Us
+                  | &nbsp;below.
+              .input-wrapper.lg.page-item
+                input#membersPwd.top-section(type='password', placeholder='Enter Your Password', name='password', autofocus='true')
+              button#membersSubmit.button.hover-scale.color-white.bg-prim.lg(type='submit') Login To Members Area &rarr;
+            br
+            br
+    +contactFooter()

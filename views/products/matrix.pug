@@ -1,0 +1,358 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='NGSSMatrix')
+    +navigation()
+    #NGSSMatrixSection.page-section.large-section.top-section.white.section-icon
+      .container.large
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 NGSS Curriculum&nbsp;
+                span.c-sec.new-line Matrix
+                  sup &reg;&nbsp;
+            .link-icon.wow.slideInRight
+              a.blue-link.sm(href='/products/CurriculumUnits') View All Units&nbsp;
+                +arrow()
+      table#matrixTable.sm(border='1 solid black')
+        tbody
+          tr
+            th Scientific Skills
+            th Strands
+            th.yellow(style='background-color: #ffe6c2')
+              a(href='') Pre-Kindergarten
+            th.pinkOne(style='background-color: #ffc0c3')
+              a(href='') Kindergarten
+            th.blueOne(style='background-color: #f0efff')
+              a(href='') First Grade
+            th.green(style='background-color: #c1e3ca')
+              a(href='') Second Grade
+            th.purple(style='background-color: #baabd3')
+              a(href='') Third Grade
+            th.pinkTwo(style='background-color: #f8cadf')
+              a(href='') Fourth Grade
+            th.blueTwo(style='background-color: #bde5f9')
+              a(href='') Fifth Grade
+            th.blueTwo(style='background-color: #FFFF99')
+              a(href='') Sixth Grade
+            th.blueTwo(style='background-color: #bde5f9')
+              a(href='') Seventh Grade
+            th.blueTwo(style='background-color: #808080')
+              a(href='') Eighth Grade
+          tr
+            td.alignTop(rowspan='25') The Nature of Science
+            td.alignTop(rowspan='11') Physical Science
+            td.yellow(rowspan='2')
+              a(href='') What is a Magnet?
+            td.pinkOne(rowspan='2')  
+            td.blueOne(rowspan='2')
+              a(href='') Magnets
+            td.green(rowspan='2')
+              a(href='') Gravity
+            td.purple(rowspan='2')
+              a(href='') Pressure
+            td.pinkTwo
+              a(href='') Properties of Magnets
+            td.blueTwo(rowspan='2')  
+            td.blueTwo(rowspan='2', style='background-color: #FFFF99')
+              a(href='#') What Is Alternative Energy?
+            td.blueTwo(rowspan='2') Energy Of Motion
+            td.blueTwo(rowspan='2', style='background-color: #808080')
+              | Electricity &
+              | Magnetism
+          tr
+            td.pinkTwo
+              a(href='') Electricity
+          tr
+            td.yellow(rowspan='1')
+              a(href='') Will it Bounce?
+            td.pinkOne(rowspan='3')  
+            td.blueOne(rowspan='3')  
+            td.green(rowspan='3')
+              a(href='') Transportation
+            td.purple(rowspan='3')  
+            td.pinkTwo
+              a(href='') Simple Machines
+            td.blueTwo(rowspan='3')
+              a(href='') Complex Machines
+            td.blueTwo(rowspan='3', style='background-color: #FFFF99')  
+            td.blueTwo(rowspan='3') What Are Complex Machines?
+            td.blueTwo(rowspan='2', style='background-color: #808080')
+              | Building
+              | Bridges
+          tr
+            td.yellow(rowspan='2')
+              a(href='#') Can We Build It?
+            td.pinkTwo
+              a(href='') Flight
+          tr
+            td.pinkTwo
+              a(href='') Force & Motion
+            td.blueTwo(style='background-color: #808080') Motion & Forces
+          tr
+            td.yellow
+              a(href='') How Do Colors Mix?
+            td.pinkOne
+              a(href='') Color
+            td.blueOne  
+            td.green  
+            td.purple
+              a(href='') Mixtures
+            td.pinkTwo  
+            td.blueTwo
+              a(href='') Science of Polymers
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080') Mixtures & Solutions
+          tr
+            td.yellow  
+            td.pinkOne  
+            td.blueOne
+              a(href='') Molecular Matter
+            td.green
+              a(href='') States of Matter
+            td.purple
+              a(href='') Chemistry
+            td.pinkTwo  
+            td.blueTwo
+              a(href='') Separating & Purifying
+            td.blueTwo(style='background-color: #FFFF99') What Are Chemicals?
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080') Chemistry
+          tr
+            td.yellow
+              a(href='') Will it Float?
+            td.pinkOne
+              a(href='') Floating & Sinking
+            td.blueOne  
+            td.green
+              a(href='') Water
+            td.purple
+              a(href='') Bouyancy
+            td.pinkTwo  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.yellow(rowspan='2')
+              a(href='') What is a Bubble?
+            td.pinkOne(rowspan='2')
+              a(href='') Light & Mirrors
+            td.blueOne(rowspan='2')
+              a(href='') What is Light?
+            td.green(rowspan='2')  
+            td.purple(rowspan='2')
+              a(href='') Crystals
+            td.pinkTwo(rowspan='2')
+              a(href='') Optic & Mirrors
+            td.blueTwo
+              a(href='') Light
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.blueTwo
+              a(href='') Lenses
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.yellow  
+            td.pinkOne  
+            td.blueOne
+              a(href='') What is Sound?
+            td.green  
+            td.purple  
+            td.pinkTwo  
+            td.blueTwo
+              a(href='') Sound
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.alignTop(rowspan='8') Life Science
+            td.yellow
+              a(href='') Why Do Leaves Fall?
+            td.pinkOne
+              a(href='') Fall
+            td.blueOne
+              a(href='') Plants
+            td.green
+              a(href='') Life Cycle of Plants
+            td.purple(rowspan='3')
+              a(href='') Plants & Animals
+            td.pinkTwo
+              a(href='') What Are Plant Adaptations?
+            td.blueTwo
+              a(href='') How Are Organisms Classified?
+            td.blueTwo(style='background-color: #FFFF99') What Is Photosynthesis?
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.yellow(rowspan='2')
+              a(href='') What is an Animal?
+            td.pinkOne(rowspan='2')
+              a(href='') Winter
+              strong (E)
+            td.blueOne(rowspan='2')
+              a(href='') Animals
+            td.green(rowspan='2')  
+            td.pinkTwo(rowspan='2')  
+            td.blueTwo
+              a(href='') Animal Adaptations
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.blueTwo  
+            td.blueTwo(style='background-color: #FFFF99')
+              a(href='#') What Is Evolution?
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.yellow(rowspan='2')
+              a(href='') What Makes Me Healthy?
+            td.pinkOne(rowspan='2')
+              a(href='') The Five Senses
+            td.blueOne
+              a(href='') Health
+            td.green(rowspan='2')
+              a(href='') Nutrition
+            td.purple(rowspan='2')  
+            td.pinkTwo(rowspan='2')
+              a(href='') What is Healthy?
+            td.blueTwo(rowspan='2')
+              a(href='') Senses
+            td.blueTwo(rowspan='2', style='background-color: #FFFF99')
+              | Cells &
+              | Microorganisms
+            td.blueTwo(rowspan='2') Human Biology Systems
+            td.blueTwo(rowspan='2', style='background-color: #808080')
+              | Human
+              | Reproduction
+          tr
+            td.blueOne
+              a(href='') Human Body
+          tr
+            td.yellow  
+            td.pinkOne  
+            td.blueOne
+              a(href='') Life Cycles
+            td.green  
+            td.purple  
+            td.pinkTwo
+              a(href='') Heredity
+            td.blueTwo
+              font(size='-2', face='Circular Std')
+            td.blueTwo(style='background-color: #FFFF99')
+              a(href='') DNA, Cells, & Heredity
+            td.blueTwo Cells & Organs
+            td.blueTwo(style='background-color: #808080') Heredity & Genetics
+          tr
+            td.yellow(rowspan='2')  
+            td.pinkOne
+              a(href='#') Coastal Community
+            td.blueOne(rowspan='2')  
+            td.green(rowspan='2')
+              a(href='') Ponds
+            td.purple(rowspan='2')
+              a(href='') Seashore
+            td.pinkTwo
+              a(href='') Ecoysystems
+            td.blueTwo(rowspan='2')  
+            td.blueTwo(rowspan='2', style='background-color: #FFFF99')  
+            td.blueTwo(rowspan='2') Ecology & Energy Flow
+            td.blueTwo(rowspan='2', style='background-color: #808080')  
+          tr
+            td.pinkOne
+              a(href='') Rainforests
+            td.pinkTwo
+              a(href='') Oceans
+          tr
+            td.alignTop(rowspan='6') Earth Science
+            td.yellow
+              a(href='') Why is it Cold Outside?
+              strong (L)
+            td.pinkOne
+              a(href='') What is Weather?
+            td.blueOne  
+            td.green
+              a(href='') Weather
+            td.purple  
+            td.pinkTwo
+              a(href='') Water Cycle
+            td.blueTwo  
+            td.blueTwo(style='background-color: #FFFF99')
+              a(href='') Weather & Climate
+            td.blueTwo How Does Water Affect Landforms?
+            td.blueTwo(style='background-color: #808080')  
+          tr
+            td.yellow(rowspan='2')  
+            td.pinkOne(rowspan='2')  
+            td.blueOne(rowspan='2')  
+            td.green(rowspan='2')  
+            td.purple
+              a(href='') Conservation
+            td.pinkTwo(rowspan='2')  
+            td.blueTwo(rowspan='2')  
+            td.blueTwo(rowspan='2', style='background-color: #FFFF99')
+              | Why is Water
+              | Essential?
+            td.blueTwo(rowspan='2')  
+            td.blueTwo(rowspan='2', style='background-color: #808080')  
+          tr
+            td.purple
+              a(href='') Fossils & Dinosaurs
+          tr
+            td.yellow
+              a(href='') Why Do Flowers Grow?
+              strong (L)
+            td.pinkOne
+              a(href='') Earth
+            td.blueOne  
+            td.green
+              a(href='') Sand or Soil
+            td.purple
+              a(href='') Rocks & Volcanoes
+            td.pinkTwo  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo What Are Landforms On Earth?
+            td.blueTwo(style='background-color: #808080')
+              | Our Earth In The Solar
+              | System
+          tr
+            td.yellow  
+            td.pinkOne  
+            td.blueOne
+              a(href='') Our Sun
+            td.green  
+            td.purple  
+            td.pinkTwo  
+            td.blueTwo
+              font(face='Circular Std', style='font-size: 9pt')
+                a(href='') Stars & Constellations
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080') What Is Astronomy?
+          tr
+            td.yellow  
+            td.pinkOne
+              a(href='') Spring
+              strong (L)
+            td.blueOne
+              a(href='') Solar System
+            td.green
+              a(href='') Seasons
+            td.purple  
+            td.pinkTwo
+              a(href='') What Defines Our Solar System?
+            td.blueTwo
+              font(face='Circular Std', style='font-size: 9pt')
+                a(href='') Changing Seasons
+            td.blueTwo(style='background-color: #FFFF99')  
+            td.blueTwo  
+            td.blueTwo(style='background-color: #808080')
+              | What Makes The Changing
+              | Seasons?

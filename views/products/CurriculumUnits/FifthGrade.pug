@@ -1,0 +1,31 @@
+extends ../../base.pug
+
+append bodyContent
+  #productInnerSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #kindergartenUnits.page-section.large-section.top-section.white.section-icon
+      .container.large
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Fifth Grade&nbsp;
+                span.c-sec.new-line Curriculum Units
+                  sup &reg;&nbsp;
+            .link-icon.wow.slideInRight
+              a.blue-link.sm(href='/products/CurriculumUnits')
+                .flipped
+                  +arrow()
+                span Back To All Units&nbsp;
+      .container.small
+        .row
+          +internationalDelivery()
+          .text-section.page-item
+            for item in data
+              - productCount = 1
+              if (item.id[2] == '5')
+                - topics = item.topics.toString().split('?')
+                - topics.splice(topics.length - 1)
+                - colorFlag = (productCount % 2 == 1) ? false : true
+                +snipCartProduct(url, 'CurriculumUnits/FifthGrade', item.id, item.name, item.price, item.description, topics, colorFlag)
+                - productCount++
+  +contactFooter()

@@ -1,0 +1,32 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Professional&nbsp;
+                span.c-sec.new-line Development
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons2.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/ProfessionalDevelopment/1.png', alt='Professional Development')
+            .text-section.wow.fadeIn.page-item.c-light.xl
+              .xl.bold.c-dark.wow.fadeIn We pride ourself that a generalist teacher can successfully follow and apply the prepared teaching instruction outlines while allowing for dynamic student and group activity and feedback.
+              br
+              span Unlike virtually every other provider, our units come “bagged and tagged”-- breaking down the demonstration process into easy to follow step by step guides. No fumbling, sorting, time-wasting, sit in the closet gathering dust approach for Ollie and friends.
+              br
+              br
+              span We are more than willing to perform on site observation, review and interactive training and update experiences. And we really do mean it - our goal is us to have your teachers - teach us!
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/ProfessionalDevelopment/2.png', alt='Professional Development')
+    +contactFooter()

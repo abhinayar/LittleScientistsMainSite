@@ -17,11 +17,135 @@ mixin product(imgSrc, title, subtext, link, linktitle, optionalClass)
         .product-button.hover-scale.button
           a.button.double-lined.c-sec(href= link)!= linktitle
 
+mixin fullProduct(imgSrc, title, desc, btnLink, btnText, blankFlag, colorFlag)
+  .full-product.col-xs-12.wow.fadeIn(id= title)
+    .row.inner-row
+      .f-product-image.col-xs-12.col-sm-4
+        .image-wrapper.wow.pulse(class= (colorFlag) ? 'bg-prim' : 'bg-sec')
+          img.img-responsive(src= imgSrc, alt= title)
+      .f-product-meta.col-xs-12.col-sm-8.col-md-8
+        .product-text
+          .product-title.inline-block.bold!= title.replace(/([A-Z]+)/g, ' $1').trim()
+          .product-desc.lg!= desc
+        if (btnLink)
+          .f-product-btn.inline-block
+            a.button.bg-prim.hover-scale.inline-block.lg(href= btnLink, target= (blankFlag) ? '_blank' : '')!= (btnText) ? btnText : 'View Details &rarr;'
+
+
+mixin snipCartProduct(url, subfolderTitle, id, title, price, desc, topics, colorFlag, topicFlag, scienceLessonFlag)
+  .full-product.snipcart-product.col-xs-12.wow.fadeIn(id= title)
+    .row.inner-row
+      .f-product-image.col-xs-12.col-sm-4
+        .image-wrapper.wow.pulse(class= (colorFlag) ? 'bg-prim' : 'bg-sec')
+          img.img-responsive(src='/images/products/' + subfolderTitle + '/' + encodeURIComponent(title) + '.jpg', alt= title)
+      .f-product-meta.col-xs-12.col-sm-8.col-md-8
+        .product-text
+          .product-title.inline-block.bold!= title
+          br
+          .product-price.inline-block.bold.xl= '$' + price
+          br
+          button.button.double-lined.double-width.product-snipcart-btn.snipcart-add-item.bg-white.hover-scale.xl(data-item-id= id, data-item-name= title, data-item-price= price, data-item-url= url + '#' + title, data-item-description= desc, data-item-image= '/images/products/' + subfolderTitle + '/' + encodeURIComponent(title) + '.jpg') Add To Cart
+          .product-desc.lg
+            span!= desc
+            if (topics)
+              br
+              span.bold.science-topics.c-dark.block= (topicFlag) ? 'Take Home Project(s):' : 'Science Topics:'
+                .sublist
+                  each topic in topics
+                    li= topic
+
+
 mixin arrow(width, height)
   - if (!width) width = '8px';
   - if (!height) height = '8px';
   svg(viewbox='0 0 18 18', aria-hidden='true', focusable='false', style='height: ' + height + '; width: ' + width + '; fill: currentcolor;')
     path(fill-rule='evenodd', d='M4.293 1.707A1 1 0 1 1 5.708.293l7.995 8a1 1 0 0 1 0 1.414l-7.995 8a1 1 0 1 1-1.415-1.414L11.583 9l-7.29-7.293z')
+
+
+mixin navigation()
+  #navigation.absolute
+    .container.relative
+      .mobile-nav.hidden-md.hidden-lg
+        .nav-logo
+          a(href='/')
+            img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
+        .nav-menu.pointer.text-center
+          span.bar
+          span.bar
+          span.bar
+          span.text.c-sec.xs Menu
+        ul.nav-list.c-w.hidden
+          span.nav-close.pointer Close (Esc)
+          li.nav-item
+            a.nav-link#HomeNav(href='/') Home
+          li.nav-item
+            a.nav-link#ProductsNav(href='/products') Products & Services
+          li.nav-item
+            a.nav-link#SuccessStoriesNav(href='/success-stories') Success Stories
+          li.nav-item
+            a.nav-link#AboutNav(href='/about') About Us
+          li.nav-item
+            a.nav-link#ContactNav(href='#Contact') Contact Us
+          li.nav-item
+            a.nav-link#LoginNav(href='/login') Login
+      .desktop-nav.hidden-xs.hidden-sm
+        .nav-logo
+          a(href='/')
+            img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
+        .top-nav
+          ul.top-nav-list
+            li.top-nav-item
+              a(href='mailto:info@little-scientists.com')
+                span.icon
+                  // TODO Insert Icon
+                span.text info@little-scientists.com
+            li.top-nav-item.phone
+              // TODO inset tel
+              a.bold(href='tel:')
+                span.icon
+                  // TODO Insert Icon
+                span.text 1-800-FACT-FUN
+        .bottom-nav
+          ul.nav-list
+            li.nav-item
+              a.nav-link#HomeNav(href='/') Home
+            li.nav-item.hasSubnav
+              a.nav-link#ProductsNav(href='/products') Products & Services
+                ul.subnav.text-left
+                  .row
+                    .col-xs-12.col-sm-4.column.one
+                      li.item-nav
+                        a(href='/products/CurriculumUnits') Curriculum Units
+                      li.item-nav
+                        a(href='/products/EarlyChildhood') Early Childhood
+                      li.item-nav
+                        a(href='/products/CorporatePartnership') Corporate Partnership
+                      li.item-nav.last
+                        a(href='/products/ScienceLessons') Science Lessons
+                    .col-xs-12.col-sm-4.column.two
+                      li.item-nav
+                        a(href='/products/InternationalLicenseeProgram') International Licensee Program
+                      li.item-nav
+                        a(href='/products/ScienceSupplies') Science Supplies & Clothing
+                      li.item-nav.last
+                        a(href='/products/ProfessionalDevelopment') Professional Development
+                    .col-xs-12.col-sm-4.column.three
+                      li.item-nav
+                        a(href='/products/InSchoolFieldTrip') In-School Field Trip
+                      li.item-nav
+                        a(href='/products#HomeSchooling') Home Schooling
+                      li.item-nav
+                        a(href='/products/BirthdayParties') Birthday Parties
+                      li.item-nav.last
+                        a.last(href='/products') VIEW ALL →
+            li.nav-item
+              a.nav-link#SuccessStoriesNav(href='/success-stories') Success Stories
+            li.nav-item
+              a.nav-link#AboutNav(href='/about') About Us
+            li.nav-item
+              a.nav-link#ContactNav(href='#Contact') Contact Us
+            li.nav-item
+              a.nav-link#LoginNav(href='/login') Login
 
 mixin contactFooter(page)
   #Contact.page-section.large-section.less-padding.off.text-left.icon-right.relative
@@ -44,9 +168,9 @@ mixin contactFooter(page)
                 .row
                   form#contact-form.wow.fadeIn
                     .input-wrapper.col-xs-12
-                      input#name(type='text', placeholder='Your Name (required)', name='name')
+                      input#name(type='text', placeholder='Your Name* (required)', name='name')
                     .input-wrapper.col-xs-12
-                      input#email(type='text', placeholder='Your Email Address (required)', name='email')
+                      input#email(type='text', placeholder='Your Email Address* (required)', name='email')
                     .input-wrapper.col-xs-12
                       textarea#message(type='text', placeholder='Your Message', name='message')
                     .input-wrapper.col-xs-12
@@ -67,3 +191,20 @@ mixin contactFooter(page)
                       | Copyright © 2017, Little Scientists Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
                   .footer-designer
                     a.footer-designer-link(href='https://linkedin.com/in/abhinayar') Designed By Abhi Nayar
+
+mixin curriculumProgramHighlights()
+  .text-section.page-item.lg.c-light
+    span.title.button.double-lined Curriculum Program Highlights:
+    ul.text-list.c-prim
+      li.list-item Ten self contained curriculum units for each grade from pre-k through fifth packaged in sturdy stackable plastic totes.
+      li.list-item Multiple small group and individual activities with materials in each unit for 25 students.
+      li.list-item Teacher manuals include background information, scripted lesson plans, written and Inquiry-based task assessments, and literacy resources.
+      li.list-item Student science notebooks and a vocabulary poster in each unit.
+      li.list-item Each lesson includes a Home-School connection booklet summarizing the lesson and providing extension activities.
+      li.list-item "Hands-on" professional development workshops for each topic.
+      li.list-item In-class mentoring/training – we teach the first lesson in each unit.
+
+mixin internationalDelivery()
+  .text-section.page-item
+    .xl.bold.c-dark.wow.fadeIn International delivery is possible by calling&nbsp;
+      a.reg-link(href='tel:18003228386') 1-800-FACT-FUN

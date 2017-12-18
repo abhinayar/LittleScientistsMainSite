@@ -1,0 +1,36 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #earlyChildhood.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Science&nbsp;
+                span.c-sec.new-line Supplies
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/ScienceSupplies/1.png', alt='Science Supplies')
+            +internationalDelivery()
+            .text-section.page-item
+              for item in data
+                - colorFlag = (productCount % 2 == 1) ? false : true
+                +snipCartProduct(url, 'ScienceSupplies', item.id, item.name, item.price, item.description, null, colorFlag)
+            .page-break.rule
+            .text-section.page-item.lg.c-light
+              span Whether its Learn At Home Kits that of course come with explanation of the science principles involved, or our highly prestigious McGraw-Hill Hands-On Activity Books that have been conference favorites for years or our OLLIE emblazoned lab coats that announce that a Little Scientist is working so hard and with so much pride, we build an image of happy people wonderfully engaged in their growing passion and thirst for science.
+              br
+              br
+              span Underneath pretty much every one of today’s real scientists lies that creative mind wanting to reach out to explore the universe in all its infinite possibilities and our educational science supplies are exactly what Mr Spock might just have ordered.... well its possible.
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/ScienceSupplies/2.png', alt='Early Childhood')
+    +contactFooter()

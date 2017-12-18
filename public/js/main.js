@@ -1,7 +1,12 @@
+//Initialize WOW.JS
+new WOW().init();
 //Main Site JS
 $(document).ready(function(){
-  //Initialize WOW.JS
-  new WOW().init();
+  // Update active nav
+  function updateNav() {
+    $('#navigation .nav-link').removeClass('active');
+    $('#navigation #' + $('.barba-container').data('namespace')).addClass('active');
+  } updateNav();
 
   /* Navigation */
   $(document, window).on('load ready scroll resize', function() {
@@ -16,7 +21,7 @@ $(document).ready(function(){
   $('.nav-menu, .nav-close').on('click', function() {
     $('.nav-list').toggleClass('hidden');
   }); $(document).keyup(function(e) {
-    if (e.keyCode == 27) {
+    if (e.keyCode == 27 && $(window).width() < 992) {
       $('.nav-list').toggleClass('hidden');
     }
   });
@@ -57,5 +62,45 @@ $(document).ready(function(){
   } setBgImgHeight();
   $(window).on('resize', function() {
     setBgImgHeight();
+  });
+
+  // Snipcart
+  Snipcart.subscribe('cart.ready', function (data) {
+    $('#snipcart-header').append('<div id="snip-header-int-shipping" class="text-section hidden-xs hidden-sm">For international purchases please call us at <a class="color-sec" href="tel:18003228386">1-800-FACT-FUN</a></div>');
+  });
+
+  // Science Lesson List
+  var scienceLessonList = new List('scienceLessonListWrapper', {
+    valueNames: ['name', 'desc']
+  });
+
+  // Smooth Scroll
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 110
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+        });
+      }
+    }
   });
 });

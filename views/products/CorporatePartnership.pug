@@ -1,0 +1,32 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Corporate&nbsp;
+                span.c-sec.new-line Partnership
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons2.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/CorporatePartnership/2.png', alt='Corporate Partnership')
+            .text-section.wow.fadeIn.page-item.c-light.xl
+              .xl.bold.c-dark.wow.fadeIn Community business and corporate leaders in both traditional and cutting edge technologies know that a trained workforce is the key for a stronger community and corporate environment for tomorrow.
+              br
+              span Little Scientists is all about that investment. We look forward to working with both education and corporate partners to achieve the goals of better science, better students to equal a better future.
+              br
+              br
+              span The child that loves learning and science today may be your community and corporate superstar of tomorrow.
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/CorporatePartnership/1.png', alt='Corporate Partnership')
+    +contactFooter()

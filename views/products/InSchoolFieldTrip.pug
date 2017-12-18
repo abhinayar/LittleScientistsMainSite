@@ -1,0 +1,78 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim In-School&nbsp;
+                span.c-sec.new-line Field Trips
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section.wow.fadeIn.c-light.xl
+              .xl.bold.c-dark.wow.fadeIn Each Little Scientists® lesson stands on its own and a Little Scientists® certified teacher can make a one time presentation on any of our 450+ lessons.
+              br
+              a.reg-link(href='#Contact') Sign Up Your Facility!
+              br
+              br
+              span Many schools prefer for us to present our classes to a wider audience. We can adjust any of our class topics for use in a regular class setting.
+              br
+              br
+              span These sessions usually run 60 minutes depending on class size. A Little Scientists educator will come to your class and present any of our lessons to your students.
+              br
+              br
+              span Hold onto your hat! We guarantee they will have a high flying adventure!
+              br
+              br
+              a.reg-link(href='#Contact') Sign Up Your Facility!
+    #Contact.page-section.large-section.less-padding.blue.text-left.icon-right.relative
+      .container
+        .row
+          .title-section.col-xs-12
+            .title
+              h3
+                span.c-w Sign Up&nbsp;
+                span.c-sec.new-line Your Facility!
+        .row
+          .no-push.col-xs-12
+            .text-section.c-w
+              .xl.bold.wow.fadeIn Can you see how our programming can add to your current enrichment activities? Need a great hands-on activity to enhance your classroom discussions on light? Call us at&nbsp;
+                a.c-sec(href='tel:18003228386') 1-800-FACT-FUN&nbsp;
+                | or sign up here, and a Little Scientists representative will contact you as soon as possible.
+            .row.content-section
+              .top-section.content-left.col-xs-12.col-sm-6
+                .contact-form.c-w
+                  //TODO: Contact Form
+                  .row
+                    form#contact-form.wow.fadeIn
+                      .input-wrapper.col-xs-12
+                        input#name(type='text', placeholder='Your Name* (required)', name='name')
+                      .input-wrapper.col-xs-12
+                        input#email(type='text', placeholder='Your Email Address* (required)', name='email')
+                      .input-wrapper.col-xs-12
+                        textarea.c-dark#message(type='text', placeholder='Your Message', name='message')
+                      .input-wrapper.col-xs-12
+                        .btn-wrapper.wow.pulse
+                          button.shadow.button.hover-scale.solid.bg-sec(type='submit') Send Message
+              .content-right.col-xs-12.col-sm-6
+                #footer
+                  .footer-content.col-xs-12
+                    .footer-logo
+                      a(href='/')
+                        img(src='/images/common/logo_main.png', alt='Little Scientists Logo')
+                    .footer-meta
+                      span.phone.footer-item Phone:&nbsp;
+                        a(href='tel:2037831114 ') (203) 783 1114
+                      span.email.footer-item Email:&nbsp;
+                        a(href='mailto:info@little-scientists.com') info@little-scientists.com
+                      span.copyright.footer-item
+                        | Copyright © 2017, Little Scientists Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
+                    .footer-designer
+                      a.footer-designer-link(href='https://linkedin.com/in/abhinayar') Designed By Abhi Nayar

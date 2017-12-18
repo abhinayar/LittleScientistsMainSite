@@ -1,0 +1,59 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #earlyChildhood.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Science&nbsp;
+                span.c-sec.new-line Lessons
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section.wow.fadeIn
+              .xl.bold.c-dark.wow.fadeIn Search here for science lessons that match your desired topic or category. Choose from over 450 classroom tested science lessons that come pre-bagged and ready to go.
+              +internationalDelivery()
+              .text-section.page-item#scienceLessonListWrapper
+                .input-wrapper
+                  input.search.c-dark.xl.hidden-sm.hidden-md.hidden-lg.science-lesson-search#scienceLessonSearchMobile(type='text', placeholder='Enter topic to start (ex: Friction)', autofocus='true')
+                  input.search.c-dark.xl.hidden-xs.science-lesson-search#scienceLessonSearch(type='text', placeholder='Enter topic or category to begin searching (ex: Friction)', autofocus='true')
+                // Science Lesson List
+                ul.science-lesson-list.list.page-item
+                  each item in data
+                    li.science-lesson.inline-block.width-100
+                      .new-line.title.name= item.name
+                      .price-cart
+                        .new-line.title.price= 'Price: '
+                          span.c-prim= '$' + item.price
+                        span.xl.c-light &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        button.button.small.c-sec.bold.hover-scale.xl.product-snipcart-btn.snipcart-add-item(data-item-id= item.id, data-item-name= item.name, data-item-price= item.price, data-item-url= url + '#' + item.name, data-item-description= item.description) ADD TO CART
+                      span.new-line.c-light.desc.lg= item.description
+                      if (item.take_home)
+                        span.new-line.bold.block.take-home-project Take Home Project:
+                        .sublist
+                          span -&nbsp;
+                          each project in item.take_home
+                            span.c-light= project
+            .page-break.rule
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/EarlyChildhood/2.png', alt='Early Childhood')
+            .text-section.page-item.lg.c-light
+              span.bold.c-dark Tired? Hungry? Ready to go home?  Rather stare at a screen?
+              br
+              br
+              span Little Scientists Enrichment programming makes it all go away with over 450 hands-on age-appropriate programs that fit very neatly by grade or with great  multi-grade elasticity as  a leading core component of your after school or specialty program choices.
+              br
+              br
+              span Using an unique formula of step by step teacher’s manuals that can convert even the most stubborn of liberal arts grads into a fair impression of a science “Know It All”  we then  add the friendly hands-on age appropriate experiments and activities organized by  topic unit. The solution from this mixture that results is a winning formula that both boys and girls appreciate and learn from at their own level.
+              br
+              br
+              span All the reinforced positive learning values are in place and we believe that winning education, happy learners and steps towards a better future are the result.
+
+    +contactFooter()

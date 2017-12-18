@@ -1,61 +1,18 @@
 extends ./base.pug
 
 append bodyContent
-  #home.barba-container.container-fluid.relative(data-namespace='home')
-    #navigation.absolute
+  // Global Site Banner
+  #banner.bg-prim.c-w.pointer.relative
+    a.banner-wrapper.c-w(href='/')
       .container.relative
-        .mobile-nav.hidden-md.hidden-lg
-          .nav-logo
-            a(href='/')
-              img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
-          .nav-menu.pointer.text-center
-            span.bar
-            span.bar
-            span.bar
-            span.text.c-sec.xs Menu
-          ul.nav-list.c-w.hidden
-            span.nav-close.pointer Close (Esc)
-            li.nav-item
-              a.active.nav-link(href='/') Home
-            li.nav-item
-              a.nav-link(href='/products-and-services') Products & Services
-            li.nav-item
-              a.nav-link(href='/success-stories') Success Stories
-            li.nav-item
-              a.nav-link(href='/about') About Us
-            li.nav-item
-              a.nav-link(href='#Contact') Contact Us
-            li.nav-item
-              a.nav-link(href='/login') Login
-        .desktop-nav.hidden-xs.hidden-sm
-          .nav-logo
-            a(href='/')
-              img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
-          .top-nav
-            ul.top-nav-list
-              li.top-nav-item
-                a(href='mailto:info@little-scientists.com')
-                  span.icon
-                    // TODO Insert Icon
-                  span.text info@little-scientists.com
-              li.top-nav-item.phone
-                // TODO inset tel
-                a.bold(href='tel:')
-                  span.icon
-                    // TODO Insert Icon
-                  span.text 1-800-FACT-FUN
-          .bottom-nav
-            ul.nav-list
-              li.nav-item
-                a.nav-link.active(href='/') Home
-              li.nav-item
-                a.nav-link(href='/products-and-services') Products & Services
-              li.nav-item
-                a.nav-link(href='/success-stories') Success Stories
-              li.nav-item
-                a.nav-link(href='#Contact') Contact Us
-              li.nav-item
-                a.nav-link(href='/login') Login
+        .row
+          .banner-text.col-xs-12.col-md-9
+            span.text Our world class NEXT GEN LS rolls out on January 1, 2018! Please join us for a celebration kickoff at Date Time Place. We hope to see you there and hope you enjoy the new Little Scientists experience!
+          .banner-link.col-xs-12.col-md-3.text-right.c-sec
+            a.c-sec(href='/') Read More&nbsp;
+              +arrow()
+  #home.barba-container.container-fluid.relative(data-namespace='HomeNav')
+    +navigation()
     #landing.page-section.home-landing.title-left.image-right.container-fluid.bg-cover.bg-center.bg-no-repeat
       .container
         .row
@@ -63,8 +20,8 @@ append bodyContent
             .ollie-img-wrapper.img-wrapper
               .ollie.relative.d-i-block.wow.fadeIn
                 // TODO: Insert Ollie
-                img#landing-ollie(src='/images/home/Ollie.png', alt='Ollie The Octopus')
-                img.landing-ollie-text(src='/images/home/Ollie_Text.png', alt='Ollie The Octopus')
+                img#landing-ollie(src='/images/home/Ollie.png', alt='Our Mascot - Ollie The Octopus')
+                img.landing-ollie-text(src='/images/home/Ollie_Text_Circular.png', alt='Our Mascot - Ollie The Octopus')
               .numbers
                 // TODO: Insert and animate numbers
           .text-section.text-btns.c-section-left.col-xs-12.col-md-7.wow.fadeIn(data-wow-delay='300ms')
@@ -72,10 +29,11 @@ append bodyContent
               h1.c-w Leaders in&nbsp;
                 span.c-sec
                   wbr
-                  | hands-on&nbsp;
+                  | hands-on
+                  span.hidden-xs &nbsp;
                   wbr
-                | science for over&nbsp;
-                span.c-sec 20 years
+                | science for&nbsp;
+                span.c-sec 25 years
             .btn-wrapper.btn-line-solid
               a.button.btn-one.bold.hover-scale.lined(href='#OurMission') Learn More
               a.button.shadow.btn-two.bold.hover-scale.solid.bg-prim(href='#Contact') Contact Us
@@ -84,12 +42,12 @@ append bodyContent
               .ollie.relative.d-i-block.wow.fadeIn
                 // TODO: Insert Ollie
                 img#landing-ollie(src='/images/home/Ollie.png', alt='Ollie The Octopus')
-                img.landing-ollie-text(src='/images/home/Ollie_Text.png', alt='Ollie The Octopus')
+                img.landing-ollie-text(src='/images/home/Ollie_Text_Circular.png', alt='Ollie The Octopus')
               .numbers
                 // TODO: Insert and animate numbers
       .scroll-action.c-w.hidden-xs.hidden-sm
         +arrow(32,32)
-    #homeMission.page-section.small-section.blue.title-left.c-w
+    #homeMission.page-section.small-section.blue.bg-ollie.title-left.c-w
       .container.smaller
         .row
           .c-section-left.main-text.col-xs-12.col-md-5.wow.fadeIn
@@ -100,7 +58,7 @@ append bodyContent
             .btn-wrapper.btn-solid-line
               a.button.btn-one.hover-scale.solid.bg-sec.bold(href='/about') About Us
               a.button.btn-two.hover-scale.lined.bold(href='/about#OurMissionDetail') Our History
-    #homeProducts.page-section.less-padding.large-section.white.title-left.link-right
+    #homeProducts.page-section.less-padding.large-section.white.title-left.link-right.section-icon
       .container
         .row
           .title-section.col-xs-12
@@ -110,18 +68,18 @@ append bodyContent
                 span.new-line &&nbsp;
                   span.c-sec Services
             .link-icon
-              a.blue-link.sm(href='/products-and-services') Explore All&nbsp;
+              a.blue-link.sm(href='/products') Explore All&nbsp;
                 +arrow()
         .row
           .content-section.col-xs-12
             .row.product-row.circles
-              +product('/images/products/NGSSCurriculumUnits.jpg', 'Curriculum Units', 'We were Next Gen. a Generation ago! Reach out to Ollie and friends and see why our education partners love us.', '/products/NGSSCurriculumUnits', 'Learn More', 'text-center')
+              +product('/images/products/CurriculumUnits.jpg', 'Curriculum Units', 'We were Next Gen. a Generation ago! Reach out to Ollie and friends and see why our education partners love us.', '/products/NGSSCurriculumUnits', 'Learn More', 'text-center odd')
               +product('/images/products/EarlyChildhood.jpg', 'Early Childhood', 'The original basis for Little Scientists back in the mid 90’s. We haven’t stopped loving Early Childhood Hands On  Age Appropriate Science Ever Since!', '/products/EarlyChildhood', 'Learn More', 'text-center')
-              +product('/images/products/EnrichmentClasses.jpg', 'Enrichment Classes', 'We’ve been exploding volcanoes (and a lot more) in after school classrooms, <span class="hidden-sm">park and recs, </span><span class="hidden-xs hidden-md hidden-lg">and </span>home school learning<span class="hidden-xs hidden-md hidden-lg"> for a generation. </span><span class="hidden-sm">, faith-based institutions for a generation.</span>', '/products/EnrichmentClasses', 'Learn More', 'text-center')
+              +product('/images/products/ScienceLessons.jpg', 'Science Lessons', 'We’ve been exploding volcanoes (and a lot more) in after school classrooms, <span class="hidden-sm">park and recs, </span><span class="hidden-xs hidden-md hidden-lg">and </span>home school learning<span class="hidden-xs hidden-md hidden-lg"> for a generation. </span><span class="hidden-sm">, faith-based institutions for a generation.</span>', '/products/EnrichmentClasses', 'Learn More', 'text-center odd')
               +product('/images/products/InternationalLicenseeProgram.jpg', 'International Licensee Program', 'We were Next Gen. a Generation ago! Reach out to Ollie and friends and see why our education partners love us.', '/products/NGSSCurriculumUnits', 'Learn More', 'text-center')
-              +product('/images/products/ScienceSupplies.jpg', 'Science Supplies', 'Our signature lab coats and McGraw- Hill published books make us an educator favorite.', '/products/ScienceSupplies', 'Learn More', 'text-center')
+              +product('/images/products/ScienceSupplies.jpg', 'Science Supplies', 'Our signature lab coats and McGraw- Hill published books make us an educator favorite.', '/products/ScienceSupplies', 'Learn More', 'text-center odd')
               +product('/images/products/ProfessionalDevelopment.jpg', 'Professional Development', 'Out of town? Our professional development means you don’t have to be out of mind!', '/products/ProfessionalDevelopment', 'Learn More', 'text-center')
-    #homeTestimonials.page-section.small-section.blue.title-right
+    #homeTestimonials.page-section.small-section.blue.bg-ollie.title-right
       .container.smaller
         .row
           .c-section-right.main-text.col-xs-12.hidden-md.hidden-lg.wow.fadeIn
@@ -154,9 +112,9 @@ append bodyContent
       .container-fluid
         .row
           .col-xs-12.hidden-sm.hidden-md.hidden-lg
-            .image-section.bg-img.bg-center.bg-cover(data-bg='/images/home/lgImageOne.png')
+            .image-section.bg-img.bg-center.bg-cover(data-bg='/images/home/lgImage1.png')
           .hidden-xs.col-sm-6.lg-img-col
-            .image-section.lg-bg-img.bg-center.bg-cover(data-bg='/images/home/lgImageOne.png')
+            .image-section.lg-bg-img.bg-center.bg-cover(data-bg='/images/home/lgImage1.png')
           .col-xs-12.col-sm-6.lg-img-text-col
             .text-section.white.text-center
               .icon.wow.pulse
@@ -176,7 +134,7 @@ append bodyContent
                 a.button.shadow.hover-scale.solid.bg-prim(href='/success-stories') Read Our Success Stories
         .row
           .col-xs-12.hidden-sm.hidden-md.hidden-lg
-            .image-section.bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImageTwo.png')
+            .image-section.bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImage2.png')
           .col-xs-12.col-sm-6.lg-img-text-col
             .text-section.white.text-center
               .icon.wow.pulse
@@ -193,5 +151,5 @@ append bodyContent
               .btn-wrapper.wow.fadeInUp
                 a.button.shadow.hover-scale.solid.bg-prim(href='/about') Learn More About Little Scientists
           .hidden-xs.col-sm-6.lg-img-col
-            .image-section.lg-bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImageTwo.png')
+            .image-section.lg-bg-img.bg-center.bg-cover.two(data-bg='/images/home/lgImage2.png')
     +contactFooter()

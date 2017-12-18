@@ -1,0 +1,161 @@
+extends ./base.pug
+
+append bodyContent
+  #about.barba-container.container-fluid.relative.subpage(data-namespace='AboutNav')
+    +navigation()
+    #aboutSectionOne.page-section.large-section.top-section.white
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 About&nbsp;
+                span.c-sec.new-line Little Scientists
+                  sup &reg;&nbsp;
+            .link-icon
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section
+              .xl.bold.wow.fadeIn.c-dark.wow.fadeIn Little Scientists
+                sup &reg;&nbsp;
+                | is an international leader in elementary school hands-on science education.
+            .image-section.half-text.content-right.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/about/DrHeidi.png', alt='Our Founder - Dr. Heidi Gold-Dworkin')
+              .image-info.hidden-xs.text-right.c-prim.wow.fadeInLeft
+                .image-title
+                  h3 Dr. Heidi
+                .image-desc
+                  p.lg Founder and member of the 1989 Nobel Prize Winning team
+            .text-section.page-item
+              .reg
+                | We were founded by Dr. Heidi Gold-Dworkin, a Yale doctor of molecular biology and a member of the 1989 Nobel prize winning team.
+                br
+                br
+                | Headquartered in Connecticut, Little Scientists
+                sup &reg;&nbsp;
+                | programs are now being implemented in public and private schools in the United States, Brazil and Japan. Little Scientists
+                sup &reg;&nbsp;
+                | has rewritten curriculum unit lessons to specifically align with the new NGSS.
+                br
+                br
+                | Little Scientists
+                sup &reg;&nbsp;
+                | specializes in providing personalized service to teachers and schools, modeling of inquiry-based science, classroom mentoring, and professional development.
+                br
+                br
+                | Our development team includes educators and scientists from Cornell, Y ale , and MIT. Science lessons are designed to be teacher friendly, exciting, easy to use, hands-on classes that motivate children and teachers alike. We meet local schools’ needs with personal attention and service.
+                br
+                br
+                | Little Scientists
+                sup &reg;&nbsp;
+                | classes increase cognitive, science, math, and literacy achievement for all students.
+    #aboutMission.page-section.small-section.blue.title-left.c-w.bg-ollie
+      .container
+        .row
+          .c-section-left.main-text.col-xs-12.col-md-5.title-shift.wow.fadeIn
+            h3.c-w Our&nbsp;
+              span.c-sec.new-line Mission
+              | &
+              span.c-sec Vision
+          .c-section-right.sub-text.col-xs-12.col-md-7.wow.slideInUp
+            span.text.d-i-block
+              | We want to&nbsp;
+              span.bold empower
+              | &nbsp;students & teachers, through the&nbsp;
+              span.bold highest quality
+              | &nbsp;of hands-on learning, to participate in science within the classroom and beyond.
+              br
+              br
+              | Our hope is that Little Scientists
+              sup &reg;&nbsp;
+              | will become the world's leader in educating the next Generation of Great Scientists
+    #aboutSectionThree.page-section.large-section.white.c-prim
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Little Scientists
+                sup &reg;&nbsp;&nbsp;
+                span.c-sec.new-line Videos
+            .link-icon.hidden-xs
+              .icon.icon-image
+                img(src='/images/common/rightIcons2.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section
+              .xl.bold.wow.fadeIn.c-dark.wow.fadeIn Videos showcasing Little Scientists
+                sup &reg;&nbsp;
+                | and our educational offerings as well as Little Scientists
+                sup &reg;&nbsp;
+                | in the news!
+            .video-section.page-item.content-left.half-text
+              iframe(width="100%", height="315", src="https://www.youtube.com/embed/GtDZ7SMczsg", frameborder="0", allowfullscreen="true")
+              .video-info.wow.fadeInRight
+                .video-title
+                  h3 Little Scientists
+                    sup &reg;&nbsp;
+                    | Overview
+                .video-desc
+                  p An overview of Little Scientists
+                  sup &reg;&nbsp;
+                  | - We show children the thrill of scientific discovery.
+            .video-section.page-item.content-right.half-text
+              iframe(width="100%", height="315", src="https://www.youtube.com/embed/m57999so4QI", frameborder="0", allowfullscreen="true")
+              .video-info.text-right.wow.fadeInLeft
+                .video-title
+                  h3 Little Scientists
+                    sup &reg;&nbsp;
+                    | In The News
+                .video-desc
+                  p WTNH covers how Little Scientists
+                    sup &reg;&nbsp;
+                  | excites children about learning through hands-on science activities.
+    #aboutInterview.page-section.large-section.blue.c-w
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 Our Founder:&nbsp;
+                span.c-sec.new-line Dr. Heidi Gold-Dworkin
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section
+              .xl.bold.wow.fadeIn A hero of science and society who gives back to her community, each and every day.
+            .image-section.half-text.content-left.page-item
+              .image-wrapper.wow.fadeInLeft
+                img(src='/images/about/DrHeidi.png', alt='Our Founder - Dr. Heidi Gold-Dworkin')
+              .image-info.hidden-xs.text-left.c-w.wow.fadeIn
+                .image-title
+                  h3.c-sec Dr. Heidi
+                .image-desc
+                  p.lg Founder and member of the 1989 Nobel Prize Winning team
+            .text-section.page-item.interview
+              .reg
+                .item.wow.fadeInUp
+                  span.bold.question.c-sec How did you develop your love of science?
+                  br
+                  span.answer I fell in love  with science growing up and attending public school in New Haven , Connecticut. A hands-on science teacher helped light the bulb of innovation and creativity in me and I hope to pass the torch forward by igniting curiosity in all young children.
+                br
+                br
+                .item.wow.fadeInUp
+                  span.bold.question.c-sec What continues to motivate you over the years?
+                  br
+                  span.answer I  was very blessed to have a world class education that culminated in several advanced degrees and opportunities to experience science research on a level that would result in a Nobel Prize  for a team that I was privileged to be  a part of.
+                br
+                br
+                .item.wow.fadeInUp
+                  span.bold.question.c-sec Why is giving back so important to you?
+                  br
+                  span.answer I saw what it was like if you don’t always get that helping hand, that special someone who says you can do it. So many people have played that role in my life.  Long ago, I knew having been blessed to raise three children and rediscovering their sense of wonder and natural curiosity, that a focus on children and science would be my life’s professional journey.
+                br
+                br
+                .item.wow.fadeInUp
+                  span.bold.question.c-sec In your perfect world what do you want children to feel or receive from LS?
+                  br
+                  span.answer I want all students who participate in hands on science learning to strengthen their inner scientist and their power to achieve.   Children have that curiosity and we as adults and educators must nurture it carefully and with a joyous celebration of that potential.
+    +contactFooter()

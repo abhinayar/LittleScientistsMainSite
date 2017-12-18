@@ -1,0 +1,48 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #earlyChildhood.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim Early&nbsp;
+                span.c-sec.new-line Childhood
+            .link-icon.wow.slideInRight
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/EarlyChildhood/1.png', alt='Early Childhood')
+            .text-section.wow.fadeIn.page-item
+              .xl.bold.c-dark.wow.fadeIn Little Scientists Early Childhood science curriculum, program and activity options are an engaging, representative and highly field-tested array of choices to meet your needs.
+            +internationalDelivery()
+            .text-section.page-item
+              for item in data
+                - topics = item.topics.toString().split('?')
+                - topics.splice(topics.length - 1)
+                - colorFlag = (productCount % 2 == 1) ? true : false
+                +snipCartProduct(url, 'EarlyChildhood', item.id, item.name, item.price, item.description, topics, colorFlag)
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/EarlyChildhood/2.png', alt='Early Childhood')
+            .text-section.page-item.lg.c-light
+              span We invested literally years, before the concept of teaching age-appropriate hands-on science was even a twinkle in most administrator’s eyes to prepare and fine-tune pre school lessons and programs always with the interaction of the child with their learning environment and content in mind. Schools and related early childhood institutions find that the LS method of integration with your broader teaching patterns and methods align strongly to create classroom continuing that integrates and builds with subject knowledge and awareness already being taught.
+              br
+              br
+              span Curriculum units such as&nbsp;
+                span.bold.c-sec Why Do Leaves Fall?,&nbsp;
+                span.bold.c-sec How Do Colors Mix?,&nbsp;
+                span.bold.c-sec Will It Float?,&nbsp;
+                span.bold.c-sec Why Do Flowers Grow?&nbsp;
+                | among others break down essential learning elements given g both knowledge and awareness through actual performance hands-on interactions results in the  reinforcement of the love of learning.
+              br
+              br
+              span For many young learners already moving forward in demonstrated interest in hands-on science, our programs build on that enthusiasm.  At the same time, LS reinforces the concept of ‘can-do’ an idea of capability that our programs are designed to either instill or validate.
+
+    +contactFooter()

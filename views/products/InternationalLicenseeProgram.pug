@@ -1,0 +1,34 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
+    +navigation()
+    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3.c-prim International&nbsp;
+                span.c-sec.new-line Licensee Program
+            .link-icon.wow.slideInRight
+              a.blue-link.sm(href='/products')
+                .flipped
+                  +arrow()
+                span Back To Products&nbsp;
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/InternationalLicenseeProgram/2.png', alt='International Licensee Program')
+            .text-section.wow.fadeIn.page-item.c-light.xl
+              .xl.bold.c-dark.wow.fadeIn In a competitive globe in science and technology, we are looking for prospective partners and license holders who want to join us in this enterprise.
+              br
+              span We understand you want high quality deliverable results in learning. We offer dynamic learning modules that have been field tested for a generation. We are looking for transparency, the easy to detect willingness to share your goals and aspirations.
+              br
+              br
+              span Generally, we only respond to inquiries that have a demonstrable track record in providing quality science and general education. We do encourage your contacts and due to demand, and many local responsibilities we must request serious inquiries only from principals. Thank you so much.
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/InternationalLicenseeProgram/1.png', alt='International Licensee Program')
+    +contactFooter()
