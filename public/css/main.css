@@ -9,6 +9,12 @@ Colors:
   Sec : #febd00
 */
 
+/* FONTS */
+@font-face {
+  font-family: "Circular Std";
+  src: url("../../fonts/circular-medium.otf");
+}
+
 * {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
