@@ -67,6 +67,14 @@ $(document).ready(function(){
   // Snipcart
   Snipcart.subscribe('cart.ready', function (data) {
     $('#snipcart-header').append('<div id="snip-header-int-shipping" class="text-section hidden-xs hidden-sm">For international purchases please call us at <a class="color-sec" href="tel:18003228386">1-800-FACT-FUN</a></div>');
+  }); Snipcart.subscribe('cart.opened', function() {
+    if ($(window).width() < 992) {
+      $('#drift-widget').addClass('hidden');
+    }
+  }); Snipcart.subscribe('cart.closed', function() {
+    if ($(window).width() < 992) {
+      $('#drift-widget').removeClass('hidden');
+    }
   });
 
   // Science Lesson List
