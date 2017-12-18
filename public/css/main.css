@@ -21,7 +21,8 @@ Colors:
 }
 
 body {
-  max-width: 100%;
+  position: relative;
+  width: 100%;
   overflow-x: hidden !important;
   position: relative;
   font-size: 14px !important;
