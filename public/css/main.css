@@ -1,6 +1,9 @@
 /*
+Little Scientists Main Website CSS
+Written by Abhi Nayar for S-E Design Co.
+*/
 
-
+/*
 Colors:
   Your color library goes here
   Light :
@@ -10,11 +13,13 @@ Colors:
 */
 
 /* FONTS */
+/* Import Circular */
 @font-face {
   font-family: "Circular Std";
   src: url("../../fonts/circular-medium.otf");
 }
 
+/* Global Style Resets */
 * {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
@@ -594,7 +599,7 @@ span sup {
   }
 
   .bottom-nav .nav-item {
-    margin-left: 50px;
+    margin-left: 40px;
   }
 }
 
@@ -868,7 +873,7 @@ span sup {
     padding: 120px 0;
   } #landing h1 {
     text-align: left;
-    font-size: 52px;
+    font-size: 48px;
     padding-left: 0;
     padding-right: 45px;
   } #landing .text-section {
@@ -879,7 +884,7 @@ span sup {
 } @media (min-width: 1200px) {
   #landing h1 {
     margin-top: 60px;
-    font-size: 64px;
+    font-size: 52px;
     padding-right: 120px;
   } #landing .ollie {
     margin-top: 75px;

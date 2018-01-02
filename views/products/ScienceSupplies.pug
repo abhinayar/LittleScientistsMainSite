@@ -8,8 +8,9 @@ append bodyContent
         .row
           .title-section.col-xs-12
             .title.wow.fadeIn
-              h3.c-prim Science&nbsp;
-                span.c-sec.new-line Supplies
+              h3.c-prim Science Supplies&nbsp;
+                span.new-line.c-dark &&nbsp;
+                  span.c-sec Clothing
             .link-icon.wow.slideInRight
               .icon.icon-image
                 img(src='/images/common/rightIcons1.png', alt="Little Scientists")
@@ -19,17 +20,27 @@ append bodyContent
             .image-section.page-item.no-margin
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/ScienceSupplies/1.png', alt='Science Supplies')
-            +internationalDelivery()
             .text-section.page-item
               for item in data
                 - colorFlag = (productCount % 2 == 1) ? false : true
                 +snipCartProduct(url, 'ScienceSupplies', item.id, item.name, item.price, item.description, null, colorFlag)
             .page-break.rule
             .text-section.page-item.lg.c-light
-              span Whether its Learn At Home Kits that of course come with explanation of the science principles involved, or our highly prestigious McGraw-Hill Hands-On Activity Books that have been conference favorites for years or our OLLIE emblazoned lab coats that announce that a Little Scientist is working so hard and with so much pride, we build an image of happy people wonderfully engaged in their growing passion and thirst for science.
+              span Little Scientists
+                span &reg&nbsp;
+                | has been and continues to be a great resource provider in the hands-on science education field for a full generation. We are proud to offer labcoats for teachers and students. They feature Ollie , and they are a great sense of pride for students when they get to wear one. We also offer our Little Scientists Hands-on Activity Books that are published by McGraw-Hill, take home kits of our most popular student lessons, all science center supplies, and of course any of the materials that a teacher needs to implement the Little Scientists
+                span &reg&nbsp;
+                | lessons. Please contact us if the item you need is not located on this page.
               br
               br
-              span Underneath pretty much every one of today’s real scientists lies that creative mind wanting to reach out to explore the universe in all its infinite possibilities and our educational science supplies are exactly what Mr Spock might just have ordered.... well its possible.
+              span Whether its Learn At Home Kits that explain the science principles involved, or our McGraw-Hill Hands-On Activity Books that have been conference favorites for years or our OLLIE emblazoned lab coats that announce that a Little Scientist
+                span &reg&nbsp;
+                | is working so hard and with so much pride, our passion for science becomes your students passion for science.
+              br
+              br
+              span The creative mind wanting to reach out to explore the universe in all its infinite possibilities and our educational science supplies are exactly what teachers need to engage that curious Little Scientists
+                span &reg;&nbsp;
+                | in their classroom.
             .image-section.page-item
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/ScienceSupplies/2.png', alt='Early Childhood')

@@ -21,7 +21,6 @@ append bodyContent
                 img(src='/images/products/EarlyChildhood/1.png', alt='Early Childhood')
             .text-section.wow.fadeIn.page-item
               .xl.bold.c-dark.wow.fadeIn Little Scientists Early Childhood science curriculum, program and activity options are an engaging, representative and highly field-tested array of choices to meet your needs.
-            +internationalDelivery()
             .text-section.page-item
               for item in data
                 - topics = item.topics.toString().split('?')
