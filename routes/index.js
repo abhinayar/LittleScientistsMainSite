@@ -23,10 +23,10 @@ function getGoogleSheetData() {
     console.log(scienceLessonData)
     scienceSuppliesData = result[3];
   });
-} getGoogleSheetData();
+}
 setTimeout(function() {
   getGoogleSheetData();
-}, 1000 * 60 * 30)
+}, 1000 * 60 * 2)
 
 // Home Page
 router.get('/', function(req, res, next) {
