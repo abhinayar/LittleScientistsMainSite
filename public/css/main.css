@@ -1420,7 +1420,7 @@ span sup {
   width: 100%;
   color: #000489;
 } #matrixTable td:hover {
-  background-color: #333 !important;
+  background-color: #999 !important;
   cursor: pointer;
 }
 
