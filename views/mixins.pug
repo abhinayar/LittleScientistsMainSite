@@ -7,7 +7,7 @@ mixin testimonial(number, text, name, title, activeFlag)
 
 mixin product(imgSrc, title, subtext, link, linktitle, optionalClass)
   .col-xs-12.col-sm-6.col-md-4.product-wrapper
-    .product(class= optionalClass)
+    .product(class= optionalClass, id= title.replace(/\s+/g, ''))
       .product-image.wow.pulse
         a(href= link)
           img(src= imgSrc, alt= title)
@@ -18,7 +18,7 @@ mixin product(imgSrc, title, subtext, link, linktitle, optionalClass)
           a.button.double-lined.c-sec(href= link)!= linktitle
 
 mixin fullProduct(imgSrc, title, desc, btnLink, btnText, blankFlag, colorFlag)
-  .full-product.col-xs-12.wow.fadeIn(id= title)
+  .full-product.col-xs-12.wow.fadeIn(id= title.replace(/\s+/g, ''))
     .row.inner-row
       .f-product-image.col-xs-12.col-sm-4
         .image-wrapper.wow.pulse(class= (colorFlag) ? 'bg-prim' : 'bg-sec')
@@ -33,7 +33,7 @@ mixin fullProduct(imgSrc, title, desc, btnLink, btnText, blankFlag, colorFlag)
 
 
 mixin snipCartProduct(url, subfolderTitle, id, title, price, desc, topics, colorFlag, topicFlag, scienceLessonFlag)
-  .full-product.snipcart-product.col-xs-12.wow.fadeIn(id= title)
+  .full-product.snipcart-product.col-xs-12.wow.fadeIn(id= title.replace(/\s+/g, ''))
     .row.inner-row
       .f-product-image.col-xs-12.col-sm-4
         .image-wrapper.wow.pulse(class= (colorFlag) ? 'bg-prim' : 'bg-sec')
