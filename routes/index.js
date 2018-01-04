@@ -25,7 +25,7 @@ function getGoogleSheetData() {
   });
 }
 setTimeout(function() {
-  getGoogleSheetData();
+  //getGoogleSheetData();
 }, 1000 * 60 * 2)
 
 // Home Page
