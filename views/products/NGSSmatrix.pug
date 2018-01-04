@@ -1,0 +1,77 @@
+extends ../base.pug
+
+append bodyContent
+  #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='NGSSMatrix')
+    +navigation()
+    #NGSSMatrixSection.page-section.large-section.top-section.white.section-icon
+      .container.large
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 NGSS Curriculum&nbsp;
+                span.c-sec.new-line Matrix
+                  sup &reg;&nbsp;
+            .link-icon.wow.slideInRight
+              a.blue-link.sm(href='/products/CurriculumUnits') View All Units&nbsp;
+                +arrow()
+      table#NGSSMatrixTable.sm(border='1 solid black')
+        tbody
+          tr
+            td Asking questions & defining problems
+            td(rowspan='2') Physical Science
+            td(rowspan='2') What is a Force?
+            td What is Light?
+            td What are Materials?
+            td What are Properties of Magnets?
+            td What is Energy?
+            td What is Chemistry?
+          tr
+            td Developing & using models
+            td What is Sound?
+            td What is Engineering?
+            td Force & Motion
+            td Light & Sound
+            td What is Gravity?
+          tr
+            td Planning & carrying out investigations
+            td(rowspan='2') Life Science
+            td(rowspan='2') What is an Ecosystem?
+            td What are Plants?
+            td Life Cycle of Plants
+            td What is Heredity?
+            td What are the Structures of Organisms?
+            td(rowspan='2') What is Energy Flow in an Ecosystem?
+          tr
+            td Analyzing & interpreting data
+            td What are Life Cycles?
+            td What is Diversity?
+            td What is Evolution?
+            td What are Senses?
+          tr
+            td Using mathematics & computational thinking
+            td(rowspan='2') Earth & Space Science
+            td(rowspan='2') What is Weather?
+            td What is Our Sun?
+            td What are Landforms?
+            td Rocks & Minerals
+            td What are the Landforms on Earth?
+            td Why do we have Changing Seasons?
+          tr
+            td Constructing explanations & designing solutions
+            td What is the Solar System?
+            td What is Water?
+            td What is Climate?
+            td How does Weather Affect Earth?
+            td Weather & Climate
+          tr
+            td Engaging in argument from evidence
+            td(rowspan='2') Engineering, Technology & Application of Science
+            td(rowspan='2') Can we Build it?
+            td(rowspan='2')
+            td(rowspan='2')
+            td(rowspan='2')
+            td(rowspan='2')
+            td How Can We Protect Earth’s Resources?
+          tr
+            td Obtaining, evaluating, & communicating information
+            td

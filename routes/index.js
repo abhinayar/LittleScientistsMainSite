@@ -47,6 +47,9 @@ router.get('/products', function(req, res, next) {
 router.get('/products/matrix', function(req, res, next) {
   res.render('products/matrix', {})
 })
+router.get('/products/NGSSmatrix', function(req, res, next) {
+  res.render('products/NGSSmatrix', {})
+})
 
 // Product Subpages
 router.get('/products/:subpage', function(req, res, next) {
