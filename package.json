@@ -22,6 +22,9 @@
     "nayar",
     "anayar"
   ],
+  "engines": {
+    "node": "9.3.0"
+  },
   "author": "Abhi Nayar",
   "license": "ISC",
   "bugs": {
