@@ -226,6 +226,8 @@ span sup {
 
 .shadow {
   box-shadow: 0 3px 5px rgba(0,0,0,0.4)
+} .pointer {
+  cursor: pointer;
 }
 
 .title,
@@ -350,7 +352,7 @@ span sup {
 #banner {
   padding: 20px 5px;
   line-height: 1.8em;
-  z-index: 9998;
+  z-index: 9996;
 } #banner:hover {
   background-color: #0107DE;
 } .banner-text {
@@ -381,7 +383,7 @@ span sup {
   width: 100%;
   height: 75px;
   padding-top: 14px;
-  z-index: 9999;
+  z-index: 9997;
 } #navigation.attached {
   position: fixed;
   top: 0;
@@ -563,6 +565,8 @@ span sup {
     opacity: 0.6;
   } .top-nav .top-nav-item.phone:before {
     background-image: url(/images/common/nav_phone.svg);
+  } .top-nav .top-nav-item.cart:before {
+    background-image: url(/images/common/nav_cart.svg);
   }
 
 
@@ -1426,7 +1430,7 @@ span sup {
 }
 
 #NGSSMatrixTable , #NGSSMatrixTable td, #NGSSMatrixTable th {
-	border: 1px solid #595959;
+	border: 2px solid #fff;
 	border-collapse: collapse;
   text-align: center;
 }
@@ -1446,12 +1450,11 @@ span sup {
 #NGSSMatrixTable td a {
   padding: 15px 10px;
   display: inline-block;
+  color: #000;
   width: 100%;
   height: 100%;
   vertical-align: middle;
-}
-#NGSSMatrixTable td a:hover {
-  background-color: #999;
+  text-decoration: underline;
 }
 #NGSSMatrixTable .even {
 	background: #fbf8f0;
@@ -1501,6 +1504,7 @@ span sup {
   margin-top: 80px;
   box-shadow: 0 3px 5px rgba(0,0,0,0.4);
   font-family: 'Circular Std' !important;
+  z-index: 9998 !important;
 } .snip-layout .snip-header,
 .snip-layout .snip-layout__main-container {
   border-top-right-radius: 7px;

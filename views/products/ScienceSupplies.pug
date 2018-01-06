@@ -8,9 +8,8 @@ append bodyContent
         .row
           .title-section.col-xs-12
             .title.wow.fadeIn
-              h3.c-prim Science Supplies&nbsp;
-                span.new-line.c-dark &&nbsp;
-                  span.c-sec Clothing
+              h3.c-prim Science&nbsp;
+                span.new-line.c-sec Supplies
             .link-icon.wow.slideInRight
               .icon.icon-image
                 img(src='/images/common/rightIcons1.png', alt="Little Scientists")
@@ -21,14 +20,18 @@ append bodyContent
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/ScienceSupplies/1.png', alt='Science Supplies')
             .text-section.page-item
+              .xl.bold.c-dark.wow.fadeIn Our science supplies lab coats and McGraw- Hill Hands-on Science Activity books make us an educator favorite. Little Scientists has been and continues to be a great resource provider in the hands-on science education field for a full generation.
+              br
+              br
+              span.xl Please contact us if the item you need is not located on this page.
+              br
+              br
               for item in data
                 - colorFlag = (productCount % 2 == 1) ? false : true
                 +snipCartProduct(url, 'ScienceSupplies', item.id, item.name, item.price, item.description, null, colorFlag)
             .page-break.rule
             .text-section.page-item.lg.c-light
-              span Little Scientists
-                span &reg&nbsp;
-                | has been and continues to be a great resource provider in the hands-on science education field for a full generation. We are proud to offer labcoats for teachers and students. They feature Ollie , and they are a great sense of pride for students when they get to wear one. We also offer our Little Scientists Hands-on Activity Books that are published by McGraw-Hill, take home kits of our most popular student lessons, all science center supplies, and of course any of the materials that a teacher needs to implement the Little Scientists
+              span We are proud to offer labcoats for teachers and students. They feature Ollie , and they are a great sense of pride for students when they get to wear one. We also offer our Little Scientists Hands-on Activity Books that are published by McGraw-Hill, take home kits of our most popular student lessons, all science center supplies, and of course any of the materials that a teacher needs to implement the Little Scientists
                 span &reg&nbsp;
                 | lessons. Please contact us if the item you need is not located on this page.
               br

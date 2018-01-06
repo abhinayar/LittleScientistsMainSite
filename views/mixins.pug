@@ -105,6 +105,12 @@ mixin navigation()
                 span.icon
                   // TODO Insert Icon
                 span.text 1-800-FACT-FUN
+            li.top-nav-item.cart
+              // TODO inset tel
+              a.bold.snipcart-checkout.pointer
+                span.icon
+                  // TODO Insert Icon
+                span.text Cart
         .bottom-nav
           ul.nav-list
             li.nav-item
@@ -126,7 +132,7 @@ mixin navigation()
                       li.item-nav
                         a(href='/products/InternationalLicenseeProgram') International Licensee Program
                       li.item-nav
-                        a(href='/products/ScienceSupplies') Science Supplies & Clothing
+                        a(href='/products/ScienceSupplies') Science Supplies
                       li.item-nav.last
                         a(href='/products/ProfessionalDevelopment') Professional Development
                     .col-xs-12.col-sm-4.column.three
@@ -202,3 +208,114 @@ mixin internationalDelivery()
   .text-section.page-item
     .xl.bold.c-dark.wow.fadeIn International delivery is possible by calling&nbsp;
       a.reg-link(href='tel:18003228386') 1-800-FACT-FUN
+
+mixin NGSSMatrix()
+  table#NGSSMatrixTable.sm(border='1 solid black')
+    tbody
+      tr
+        th(style="background-color: #f0f0f0") Science and Engineering Practices
+        th(style="background-color: #f0f0f0") Disciplinary Core Ideas
+        th(style='background-color: #ffc0c3')
+          a(href='/products/CurriculumUnits/Kindergarten') Kindergarten
+        th(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade') First Grade
+        th(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade') Second Grade
+        th(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade') Third Grade
+        th(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade') Fourth Grade
+        th(style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade') Fifth Grade
+      tr
+        td(style="background-color: #fafafa") Asking questions & defining problems
+        td(rowspan='2', style="background-color: #fafafa") Physical Science
+        td(style='background-color: #ffc0c3', rowspan='2')
+          a(href='/products/CurriculumUnits/Kindergarten/#WhatisaForce?') What is a Force?
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatisLight?') What is Light?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#WhatareMaterials?') What are Materials?
+        td(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade/#WhatarePropertiesofMagnets?') What are Properties of Magnets?
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#WhatisEnergy?') What is Energy?
+        td(style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade/#WhatareChemicals?') What are Chemicals?
+      tr
+        td(style="background-color: #fafafa") Developing & using models
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatisSound?') What is Sound?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#WhatisEngineering?') What is Engineering?
+        td(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade/#Force&Motion') Force & Motion
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#Light&Sound') Light & Sound
+        td(style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade/#WhatisGravity?') What is Gravity?
+      tr
+        td(style="background-color: #fafafa") Planning & carrying out investigations
+        td(rowspan='2', style="background-color: #fafafa") Life Science
+        td(rowspan='2', style='background-color: #ffc0c3')
+          a(href='/products/CurriculumUnits/Kindergarten/#WhatisanEcosystem?') What is an Ecosystem?
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatarePlants?') What are Plants?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#LifeCyclesofPlants?') Life Cycle of Plants
+        td(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade/#WhatisHeredity?') What is Heredity?
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#WhataretheStructuresofOrganisms?') What are the Structures of Organisms?
+        td(rowspan='2', style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade/#WhatisEnergyFlowinanEcosystem?') What is Energy Flow in an Ecosystem?
+      tr
+        td(style="background-color: #fafafa") Analyzing & interpreting data
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatareLifeCycles?') What are Life Cycles?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#WhatisDiversity?') What is Diversity?
+        td(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade/#WhatisEvolution?') What is Evolution?
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#WhatareSenses?') What are Senses?
+      tr
+        td(style="background-color: #fafafa") Using mathematics & computational thinking
+        td(rowspan='2', style="background-color: #fafafa") Earth & Space Science
+        td(rowspan='2', style='background-color: #ffc0c3')
+          a(href='/products/CurriculumUnits/Kindergarten/#WhatisWeather?') What is Weather?
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatisOurSun?') What is Our Sun?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#WhatareLandForms?') What are Landforms?
+        td(style='background-color: #c1a9d5') Rocks & Minerals
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#WhatarethelandformsonEarth?') What are the Landforms on Earth?
+        td(style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade/#WhydowehaveChangingSeasons?') Why do we have Changing Seasons?
+      tr
+        td(style="background-color: #fafafa") Constructing explanations & designing solutions
+        td(style='background-color: #cec9ea')
+          a(href='/products/CurriculumUnits/FirstGrade/#WhatistheSolarSystem?') What is the Solar System?
+        td(style='background-color: #a8e1c0')
+          a(href='/products/CurriculumUnits/SecondGrade/#WhatisWater?') What is Water?
+        td(style='background-color: #c1a9d5')
+          a(href='/products/CurriculumUnits/ThirdGrade/#WhatisClimate?') What is Climate?
+        td(style='background-color: #ffb9d8')
+          a(href='/products/CurriculumUnits/FourthGrade/#HowDoesWeatherAffectEarth?') How does Weather Affect Earth?
+        td(style='background-color: #9fe1fb')
+          a(href='/products/CurriculumUnits/FifthGrade/#Weather&Climate') Weather & Climate
+      tr
+        td(style="background-color: #fafafa") Engaging in argument from evidence
+        td(rowspan='2', style="background-color: #fafafa") Engineering, Technology & Application of Science
+        td(rowspan='2', style='background-color: #ffc0c3')
+          a(href='/products/CurriculumUnits/Kindergarten/#CanWeBuildIt?') Can we Build it?
+        td(rowspan='2', style='background-color: #cec9ea')
+        td(rowspan='2', style='background-color: #a8e1c0')
+        td(rowspan='2', style='background-color: #c1a9d5')
+        td(rowspan='2', style='background-color: #ffb9d8')
+        td(style='background-color: #9fe1fb')
+          a(href="/products/CurriculumUnits/FifthGrade/#HowCanWeProtectEarth'sResources?") How Can We Protect Earth’s Resources?
+      tr
+        td(style="background-color: #fafafa") Obtaining, evaluating, & communicating information
+        td(style='background-color: #9fe1fb')
