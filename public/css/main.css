@@ -1255,6 +1255,12 @@ span sup {
   margin-top: 20px;
 } .text-list li {
   margin-bottom: 10px;
+} .inline-img-link {
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+} .inline-img-link img {
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .subpage {
@@ -1390,7 +1396,7 @@ span sup {
 }
 
 
-/* NGSS Matrix */
+/* K-8 Matrix */
 #matrixTable,
 #NGSSMatrixTable {
   max-width: 1400px;
@@ -1403,6 +1409,7 @@ span sup {
   padding: 20px 7px;
   text-align: center;
   line-height: 1.25em;
+  border: 3px solid #fff;
 } #matrixTable th a {
   color: #000489;
   border-bottom: 1px solid #febd00;
@@ -1423,14 +1430,15 @@ span sup {
 } #matrixTable td a {
   display: inline-block;
   width: 100%;
-  color: #000489;
-} #matrixTable td:hover {
-  background-color: #999 !important;
-  cursor: pointer;
+  color: #000;
+  text-decoration: underline;
 }
-
-#NGSSMatrixTable , #NGSSMatrixTable td, #NGSSMatrixTable th {
-	border: 2px solid #fff;
+/* NGSS Matrix */
+#NGSSMatrixTable {
+  border: 4px solid #eee;
+}
+#NGSSMatrixTable td, #NGSSMatrixTable th {
+	border: 3px solid #fff;
 	border-collapse: collapse;
   text-align: center;
 }

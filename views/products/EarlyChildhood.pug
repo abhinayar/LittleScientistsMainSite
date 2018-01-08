@@ -15,36 +15,40 @@ append bodyContent
                 img(src='/images/common/rightIcons1.png', alt="Little Scientists")
       .container.small
         .row
-          .content-section.no-push.col-xs-12
-            .image-section.page-item.no-margin
-              .image-wrapper.wow.fadeIn
-                img(src='/images/products/EarlyChildhood/1.png', alt='Early Childhood')
-            .text-section.wow.fadeIn.page-item
-              .xl.bold.c-dark.wow.fadeIn Our Pre-Kindergarten Curriculum engages all young children as natural scientists. The goal of Little Scientists&reg; is to excite all children about the world of science, using innovative educational techniques.
+          .content-section.no-margin.col-xs-12
+            .text-section.wow.fadeIn.page-item.no-margin
+              .xl.bold.c-dark.wow.fadeIn Our Pre-Kindergarten Curriculum engages all young children as natural scientists.
               br
-              span.xl Coupling interactive projects, entertaining demonstrations and simple experiments with children&#39;s natural curiosity, Little Scientists® introduces children to the thrill of scientific discovery.
+              span.xl Click on the Curriculum Unit or Science Experiment Bag tabs below for detailed descriptions of our Little Scientists Early Childhood Curriculum options.
+            .image-section.page-item
+              .image-wrapper.wow.fadeIn
+                a(href='/products/EarlyChildhood/ScienceExperimentBags').inline-img-link.hover-scale
+                  img(src='/images/products/EarlyChildhood/ScienceExperimentBags.png', alt='Science Experiment Bags')
+                a(href='/products/EarlyChildhood/PreKCurriculumUnits').inline-img-link.hover-scale
+                  img(src='/images/products/EarlyChildhood/PreKCurriculumUnits.png', alt='Pre-K Curriculum Units')
             .text-section.page-item
-              for item in data
-                - topics = item.topics.toString().split('?')
-                - topics.splice(topics.length - 1)
-                - colorFlag = (productCount % 2 == 1) ? true : false
-                +snipCartProduct(url, 'EarlyChildhood', item.id, item.name, item.price, item.description, topics, colorFlag)
+              span.xl The goal of Little Scientists® is to excite all children about the world of science, using innovative educational techniques. Coupling interactive projects, entertaining demonstrations and simple experiments with children's natural curiosity, Little Scientists® introduces children to the thrill of scientific discovery.
+              br
+              br
+              span.xl We seek to convert a child’s natural curiosity into a solid foundation of scientific skills and practices. Little Scientists programs are easily sustainable and teachable for all early childhood classrooms. All our lessons are inquiry based, teacher friendly and age appropriate aligning with all state and national early childhood Science Standards.
+              br
+              br
+              +earlyChildhoodProgramHighlights()
             .image-section.page-item
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/EarlyChildhood/2.png', alt='Early Childhood')
-            .text-section.page-item.lg.c-light
-              span We seek to convert a child’s natural curiosity into a solid foundation of scientific skills and practices. Little Scientists programs are easily sustainable and teachable for all early childhood classrooms. All our lessons are inquiry based, teacher friendly and age appropriate aligning with all state and national early childhood Science Standards.
-              br
-              br
-              span.title.button.double-lined span.title.button.double-lined Early Childhood Curriculum Program Highlights:
-              ul.text-list.c-prim
-                li.list-item 11 self contained curriculum units for Pre-k packaged in sturdy stackable plastic totes.
-                li.list-item Teaching is to cooperative learning groups of 4 students at the science center. Teaching is to cooperative learning groups of 4 students at the science center.
-                li.list-item Teaching is to cooperative learning groups of 4 students at the science center.
-                li.list-item Each lesson includes a Home-School connection booklet summarizing the lesson and providing extension activities.
-                li.list-item Materials in each unit and Science Experiment bag are for a class of 20 students.
-              br
-              br
-              span For many young learners already moving forward in demonstrated interest in hands-on science, our programs build on that enthusiasm.  At the same time, LS reinforces the concept of ‘can-do’ an idea of capability that our programs are designed to either instill or validate.
 
     +contactFooter()
+
+
+mixin earlyChildhoodProgramHighlights()
+  .text-section.page-item.lg.c-light.xl
+    span.title.button.double-lined Early Childhood Curriculum Highlights:
+    ul.text-list.c-prim.wow.fadeInUp
+      li.list-item 11 self contained Curriculum Units for Pre-k packaged in sturdy stackable plastic totes. Each unit contains 4 related science lessons
+      li.list-item 19 Science Experiment Bags packaged in sturdy plastic bags
+      li.list-item Teaching is to cooperative learning groups of 4 students at the science center
+      li.list-item Teacher manuals include background information, scripted lesson plans, written and inquiry-based task assessments, and literacy resources
+      li.list-item Student science notebooks and a vocabulary poster in each unit
+      li.list-item Each lesson includes a Home-School connection booklet summarizing the lesson and providing extension activities
+      li.list-item Materials in each Curriculum Unit and Science Experiment Bag are for a class of 20 students

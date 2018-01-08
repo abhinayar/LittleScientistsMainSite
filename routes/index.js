@@ -55,11 +55,7 @@ router.get('/products/NGSSmatrix', function(req, res, next) {
 router.get('/products/:subpage', function(req, res, next) {
   var subpage = req.params.subpage;
   if (subpage) {
-    if (subpage == 'EarlyChildhood') {
-      res.render('products/EarlyChildhood', {
-        data: earlyChildhoodData
-      })
-    } else if (subpage == 'ScienceSupplies') {
+    if (subpage == 'ScienceSupplies') {
       res.render('products/ScienceSupplies', {
         data: scienceSuppliesData,
         url: '/products/ScienceSupplies'
@@ -76,6 +72,19 @@ router.get('/products/:subpage', function(req, res, next) {
     res.redirect('/products')
   }
 })
+
+// Early Childhood Subpages
+router.get('/products/EarlyChildhood/:item', function(req, res, next) {
+  var item = req.params.item;
+  if (item) {
+    res.render('products/EarlyChildhood/' + item, {
+      data : earlyChildhoodData,
+      url : '/products/EarlyChildhood/' + item
+    });
+  } else {
+    res.redirect('/products/EarlyChildhood');
+  }
+});
 
 // Curriculum Unit Subpages
 router.get('/products/CurriculumUnits/:gradeLevel', function(req, res, next) {

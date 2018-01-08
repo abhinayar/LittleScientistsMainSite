@@ -17,7 +17,10 @@ append bodyContent
         .row
           .content-section.no-push.col-xs-12
             .text-section.wow.fadeIn
-              .xl.bold.c-dark.wow.fadeIn Our Curriculum exceeds all state and national standards. Little Scientists® Curriculum Units are designed to make implementation easy for teachers.
+              .xl.bold.c-dark.wow.fadeIn Our Curriculum exceeds all state and national standards.
+                br
+                br
+                span Little Scientists® Curriculum Units utilizing innovative Hands-on, Minds-on, Inquiry & Practice -Based science experiments are proven to increase students' understanding of scientific concepts.
                 br
                 br
               span.xl Click on a grade below for detailed descriptions of our units or browse through our&nbsp;
@@ -43,10 +46,8 @@ append bodyContent
             .hidden-xs
               br
               br
-              br
-              br
-              .text-section.wow.fadeIn
-                .xl.bold.c-dark.wow.fadeIn Our curriculum units are designed to exceed all 3 Dimensions in the Next Generation Science Standards. Browse our curriculum matrix below, or
+              .text-section
+                .xl.bold.c-dark Our curriculum units are designed to exceed all 3 Dimensions in the Next Generation Science Standards. Browse our curriculum matrix below, or
                   a.reg-link(href='/products/NGSSMatrix') view a larger version here
       #NGSSMatrix.hidden-xs
         +NGSSMatrix()
@@ -56,22 +57,26 @@ append bodyContent
             .image-section.page-item
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/CurriculumUnits/sample.png', alt='Sample Curriculum Units')
+            .text-section.page-item
+              span.xl To see the alignment of the Little Scientists Units with the NGSS please click here for the pdf
+              br
+              br
+              span.xl Little Scientists can customize science curriculum to meet your school’s needs,&nbsp;
+                a.reg-link(href='#Contact') contact us for more information.
+                | &nbsp;To view additional Little Scientists Curriculum Units Available click&nbsp;
+                a.reg-link(href='/products/matrix') here (Pre-K-8 matrix)
+
             +curriculumProgramHighlights()
             .image-section.page-item
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/CurriculumUnits/2.png', alt='Little Scientists Curriculum Units')
-            .text-section.page-item.lg.c-light
-              span.c-dark.bold Curriculum units designed to exceed all 3 Dimensions in the Next Generation Science Standards.
-              br
-              br
-              span There is a scripted teacher’s manual and each investigation is” Bagged and Tagged” for ease of use. Our prepackaged, curriculum units eliminate the hunt for materials, lesson plans and assessments.  The  Hands-on, Minds-on, Inquiry &amp; Practice -Based science experiments are proven to increase students&#39; understanding of scientific concepts.
     +contactFooter()
 
 
 mixin curriculumProgramHighlights()
-  .text-section.page-item.lg.c-light
+  .text-section.page-item.lg.c-light.xl
     span.title.button.double-lined Curriculum Program Highlights:
-    ul.text-list.c-prim
+    ul.text-list.c-prim.wow.fadeInUp
       li.list-item Curriculum units are packaged in sturdy stackable plastic totes.
       li.list-item Each curriculum unit consists of 4 related science topics. There are 14-20 hands-on, minds-on inquiry and practice based investigations in each unit
       li.list-item Multiple small group and individual activities with consumable and durable materials in each unit for 25 students. Teacher manuals include background information, scripted lesson plans, written and inquiry-based task assessments, and literacy resources.
