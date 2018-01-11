@@ -23,10 +23,10 @@ append bodyContent
                 span Little Scientists® Curriculum Units utilizing innovative Hands-on, Minds-on, Inquiry & Practice -Based science experiments are proven to increase students' understanding of scientific concepts.
                 br
                 br
-              span.xl Click on a grade below for detailed descriptions of our units or browse through our&nbsp;
+              span.xl.hidden-md.hidden-lg Click on a grade below for detailed descriptions of our units or browse through our&nbsp;
                 a.reg-link.hidden-xs(href="#NGSSMatrix") curriculum subject matrix.
                 a.reg-link.hidden-sm.hidden-md.hidden-lg(href='http://little-scientists.com/2016.LittleScientistsNGSS.Matrix.pdf', target='_blank') curriculum subject matrix.
-            .list-section.page-item
+            .list-section.page-item.hidden-md.hidden-lg
               ul.item-nav-list.large-list.wow.fadeInUp
                 .row
                   .col-xs-6.col-sm-6
@@ -44,10 +44,10 @@ append bodyContent
                     li.item-nav
                       a(href='/products/CurriculumUnits/FifthGrade') 5th Grade Units
             .hidden-xs
-              br
-              br
+              br.hidden-md.hidden-lg
+              br.hidden-md.hidden-lg
               .text-section
-                .xl.bold.c-dark Our curriculum units are designed to exceed all 3 Dimensions in the Next Generation Science Standards. Browse our curriculum matrix below, or
+                .xl.c-dark Our curriculum units are designed to exceed all 3 Dimensions in the Next Generation Science Standards. Browse our curriculum matrix below, or&nbsp;
                   a.reg-link(href='/products/NGSSMatrix') view a larger version here
       #NGSSMatrix.hidden-xs
         +NGSSMatrix()
@@ -58,13 +58,14 @@ append bodyContent
               .image-wrapper.wow.fadeIn
                 img(src='/images/products/CurriculumUnits/sample.png', alt='Sample Curriculum Units')
             .text-section.page-item
-              span.xl To see the alignment of the Little Scientists Units with the NGSS please click here for the pdf
+              span.xl To see the alignment of the Little Scientists Units with the NGSS please
+                a.reg-link(href='./LittleScientistsNGSSAlignment.pdf') click here for the pdf
               br
               br
               span.xl Little Scientists can customize science curriculum to meet your school’s needs,&nbsp;
-                a.reg-link(href='#Contact') contact us for more information.
-                | &nbsp;To view additional Little Scientists Curriculum Units Available click&nbsp;
-                a.reg-link(href='/products/matrix') here (Pre-K-8 matrix)
+                a.reg-link(href='#Contact') contact us
+                | &nbsp; for more information. To view additional Little Scientists Curriculum Units Available click&nbsp;
+                a.reg-link(href='/products/matrix') here (Pre-K-8 matrix).
 
             +curriculumProgramHighlights()
             .image-section.page-item

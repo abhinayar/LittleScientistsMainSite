@@ -3,7 +3,7 @@ extends ../base.pug
 append bodyContent
   #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
     +navigation()
-    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+    #birthdayParties.page-section.large-section.top-section.white.section-icon
       .container
         .row
           .title-section.col-xs-12
@@ -45,7 +45,7 @@ append bodyContent
               br
               br
               a.reg-link.xl(href='#Contact') Reserve Your Party Below!
-    #Contact.page-section.large-section.less-padding.blue.text-left.icon-right.relative
+    #Contact.page-section.large-section.less-padding.blue.text-left.icon-right.relative.dark-contact
       .container
         .row
           .title-section.col-xs-12
@@ -56,10 +56,11 @@ append bodyContent
         .row
           .no-push.col-xs-12
             .text-section.c-w
-              .xl.bold.wow.fadeIn Reserve your party here! Parties held more than 30 miles from Little Scientists corporate headquarters incur additional travel fees.
+              .xl.wow.fadeIn Reserve your party here! Parties held more than 30 miles from Little Scientists corporate headquarters incur additional travel fees.
                 br
                 br
-                | After your date is reserved. You will receive an e-mail verifying the date, time, location, science theme, and number of participants.
+                | Please include in your message the&nbsp;
+                span.bold date of party, location, a science theme, number of partygoers and your child's name.
             .row.content-section
               .top-section.content-left.col-xs-12.col-sm-6
                 .contact-form.c-w
@@ -71,7 +72,7 @@ append bodyContent
                       .input-wrapper.col-xs-12
                         input#email(type='text', placeholder='Your Email Address* (required)', name='email')
                       .input-wrapper.col-xs-12
-                        textarea.c-dark#message(type='text', placeholder='Your Message', name='message')
+                        textarea.c-dark#message(type='text', placeholder='Please Include The Information Requested Above* (required)', name='message')
                       .input-wrapper.col-xs-12
                         .btn-wrapper.wow.pulse
                           button.shadow.button.hover-scale.solid.bg-sec(type='submit') Send Message

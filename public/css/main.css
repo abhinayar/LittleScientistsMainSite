@@ -338,7 +338,13 @@ span sup {
   max-height: 180px;
   padding-top: 7px;
   max-width: 100%;
-} @media (min-width: 540px) {
+} .dark-contact .input-wrapper input {
+  color: #fff;
+} .dark-contact .input-wrapper textarea {
+  border-radius: 3px;
+}
+
+@media (min-width: 540px) {
   .input-wrapper {
     margin-bottom: 10px;
   } .input-wrapper textarea {
@@ -1079,11 +1085,11 @@ span sup {
 #homeTwoCol .image-section {
   height: 160px;
   background-color: #121314;
-  background-image: url(/images/home/lgImage1.png);
+  background-image: url(/images/home/lgImage1_mob.png);
   background-position: center;
   background-size: cover;
 } #homeTwoCol .image-section.two {
-  background-image: url(/images/home/lgImage2.png);
+  background-image: url(/images/home/lgImage2_mob.png);
 } #homeTwoCol .text-section {
   padding: 30px 20px 60px 20px;
   color: #777;
@@ -1124,8 +1130,10 @@ span sup {
     background-position: left 90px;
     position: relative;
     z-index: 2;
+    background-image: url(/images/home/lgImage1.png);
   } #homeTwoCol .image-section.two {
     background-position: right 90px;
+    background-image: url(/images/home/lgImage2.png);
   }
 } @media (min-width: 1200px) {
   #homeTwoCol .text-section {
