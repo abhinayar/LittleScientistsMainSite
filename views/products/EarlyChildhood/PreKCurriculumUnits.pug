@@ -21,7 +21,6 @@ append bodyContent
             for item in data
               if (item.topics !== 'Science Experiment Bag')
                 - topics = item.topics.toString().replace(/\\/g, "|").split('|')
-                - topics.splice(topics.length - 1)
                 - colorFlag = (productCount % 2 == 1) ? true : false
                 +snipCartProduct(url, 'EarlyChildhood', item.id, item.name, item.price, item.description, topics, colorFlag)
   +contactFooter()

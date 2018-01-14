@@ -23,7 +23,6 @@ append bodyContent
               - productCount = 1
               if (item.id[2] == '1')
                 - topics = item.topics.toString().replace(/\\/g, "|").split('|')
-                - topics.splice(topics.length - 1)
                 - colorFlag = (productCount % 2 == 1) ? false : true
                 +snipCartProduct(url, 'CurriculumUnits/FirstGrade', item.id, item.name, item.price, item.description, topics, colorFlag)
                 - productCount++
