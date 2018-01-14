@@ -19,9 +19,9 @@ append bodyContent
         .row
           .text-section.page-item
             for item in data
-              if (item.description === 'Science Experiment Bag')
+              if (item.topics === 'Science Experiment Bag')
                 - topics = item.topics.toString().split('?')
                 - topics.splice(topics.length - 1)
                 - colorFlag = (productCount % 2 == 1) ? true : false
-                +snipCartProduct(url, 'EarlyChildhood', item.id, item.name, item.price, item.description, topics, colorFlag)
+                +snipCartProduct(url, 'EarlyChildhood', item.id, item.name, item.price, item.description, null, colorFlag)
   +contactFooter()

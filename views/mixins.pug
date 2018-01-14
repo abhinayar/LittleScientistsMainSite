@@ -194,13 +194,18 @@ mixin contactFooter(page)
                     span.email.footer-item Email:&nbsp;
                       a(href='mailto:info@little-scientists.com') info@little-scientists.com
                     span.social.footer-item
-                      a(href='') Facebook
-                      | &nbsp;|&nbsp;
-                      a(href='') Twitter
-                      | &nbsp;|&nbsp;
-                      a(href='') Instagram
+                      a(href='')
+                        img(src='/images/common/social/fb.png', alt="Little Scientists Facebook")
+                      | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      a(href='')
+                        img(src='/images/common/social/tw.png', alt="Little Scientists Twitter")
+                      | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      a(href='')
+                        img(src='/images/common/social/ig.png', alt="Little Scientists Instagram")
                     span.copyright.footer-item
-                      | Copyright © 2017, Little Scientists Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
+                      | Copyright © 2018, Little Scientists
+                      sup &reg;
+                      | &nbsp;Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
                   .footer-designer
                     a.footer-designer-link(href='https://linkedin.com/in/abhinayar') Designed By Abhi Nayar
 
@@ -313,8 +318,7 @@ mixin NGSSMatrix()
         td(rowspan='2', style='background-color: #a8e1c0')
         td(rowspan='2', style='background-color: #c1a9d5')
         td(rowspan='2', style='background-color: #ffb9d8')
-        td(style='background-color: #9fe1fb')
+        td(rowspan='2', style='background-color: #9fe1fb')
           a(href="/products/CurriculumUnits/FifthGrade/#HowCanWeProtectEarth'sResources?") How Can We Protect Earth’s Resources?
       tr
         td(style="background-color: #fafafa") Obtaining, evaluating, & communicating information
-        td(style='background-color: #9fe1fb')

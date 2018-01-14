@@ -22,7 +22,7 @@ append bodyContent
             for item in data
               - productCount = 1
               if (item.id[2] == '0')
-                - topics = item.topics.toString().split('?')
+                - topics = item.topics.toString().replace(/\\/g, "|").split('|')
                 - topics.splice(topics.length - 1)
                 - colorFlag = (productCount % 2 == 1) ? true : false
                 +snipCartProduct(url, 'CurriculumUnits/Kindergarten', item.id, item.name, item.price, item.description, topics, colorFlag)

@@ -40,7 +40,7 @@ $(document).ready(function(){
         $(t).addClass('active');
         $('.indicator-wrapper .indicator').removeClass('active');
         $('.indicator-wrapper .indicator[data-indicator="' + $(t).data('testimonial') + '"]').addClass('active');
-      }, 8000 * i);
+      }, 16000 * i);
     });
     $('.indicator-wrapper .indicator').on('click', function() {
       $('.indicator-wrapper .indicator').removeClass('active');
@@ -49,7 +49,7 @@ $(document).ready(function(){
       $('.testimonial[data-testimonial="' + $(this).data('indicator') + '"]').addClass('active');
     });
   } switchTestimonials();
-  setInterval(switchTestimonials, 24000);
+  setInterval(switchTestimonials, 48000);
 
   /* BG Image LG */
   function setBgImgHeight() {

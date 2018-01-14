@@ -207,9 +207,12 @@ a:focus {
   font-size: 16px;
 } .xl {
   font-size: 18px;
-} p sup,
+} sup,
+p sup,
 span sup {
-  font-size: 10px;
+  font-size: 50% !important;
+  position: relative !important;
+  bottom: 0.4em !important;
 } @media (min-width: 540px) {
   .xs {
     font-size: 12px;
@@ -1124,10 +1127,10 @@ span sup {
   .lg-img-col {
     padding: 0;
   } #homeTwoCol .image-section {
-    background-size: contain;
+    background-size: auto 98%;
     background-color: #fff;
     background-repeat: no-repeat;
-    background-position: left 90px;
+    background-position: left -30px;
     position: relative;
     z-index: 2;
     background-image: url(/images/home/lgImage1.png);
@@ -1161,6 +1164,10 @@ span sup {
   font-size: 12px;
   line-height: 1.6em;
   display: block;
+} #footer .footer-item img {
+  max-width: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
 } #footer .copyright {
   margin-top: 30px;
 } .footer-designer a {
@@ -1405,13 +1412,16 @@ span sup {
 
 
 /* K-8 Matrix */
-#matrixTable,
+#matrixTable  ,
 #NGSSMatrixTable {
   max-width: 1400px;
   min-width: 992px;
   margin: 0 auto;
   margin-top: 45px;
   padding: 0 30px;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: scroll;
 } #matrixTable th,
 #matrixTable td {
   padding: 20px 7px;
@@ -1444,16 +1454,14 @@ span sup {
 /* NGSS Matrix */
 #NGSSMatrixTable {
   border: 4px solid #eee;
+  overflow: scroll;
 }
 #NGSSMatrixTable td, #NGSSMatrixTable th {
 	border: 3px solid #fff;
 	border-collapse: collapse;
   text-align: center;
-}
-#NGSSMatrixTable td,  #NGSSMatrixTable th {
-	padding: 3px;
-	width: 30px;
-	height: 25px;
+  padding: 20px 0;
+  line-height: 1.25em;
 }
 #NGSSMatrixTable th {
   padding: 30px 10px;
