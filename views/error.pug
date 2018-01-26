@@ -1,4 +1,21 @@
 extends base.pug
 
 append bodyContent
-  .error An Error Occurred
+  #error.barba-container.container-fluid.relative.subpage(data-namespace='Error')
+    +navigation()
+    #aboutSectionOne.page-section.large-section.top-section.white
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 An Error&nbsp;
+                span.c-sec.new-line Occurred!
+            .link-icon
+              .icon.icon-image
+                img(src='/images/common/rightIcons1.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section
+              .xl.bold.wow.fadeIn.c-dark.wow.fadeIn An unexpected error occured.&nbsp;
+                a.reg-link(href='/') Go HOME?

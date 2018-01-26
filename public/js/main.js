@@ -1,14 +1,32 @@
+// Little Scientists Main Site Javascript
+// By Abhi Nayar for SemiErect Design Co.
+// Copyright (c) 2018 - All Rights Reserved.
+// Please contact hello@abhi.design for design information.
+//
+//
+// NOTE: Future dev., jQuery is old fashioned and this whole thing should be re-arch as a React or Vue app.
+// Out of scope for this project but definitely something you should do.
+//
+//
 //Initialize WOW.JS
 new WOW().init();
-//Main Site JS
-$(document).ready(function(){
-  // Update active nav
+
+document.addEventListener('DOMContentLoaded', function(e) {
+  console.log('DOM Fully Loaded & Parsed');
+
+  // Update active navigation item based on namespace
   function updateNav() {
     $('#navigation .nav-link').removeClass('active');
     $('#navigation #' + $('.barba-container').data('namespace')).addClass('active');
   } updateNav();
 
-  /* Navigation */
+  // Update active navigation item based on namespace
+  function updateNav() {
+    $('#navigation .nav-link').removeClass('active');
+    $('#navigation #' + $('.barba-container').data('namespace')).addClass('active');
+  } updateNav();
+
+  // Navigation code (scrolling)
   $(document, window).on('load ready scroll resize', function() {
     var bannerHeight = $('#banner').height();
     if ($(window).scrollTop() > bannerHeight + 20) {
@@ -18,6 +36,7 @@ $(document).ready(function(){
     }
   });
 
+  // Mobile navigation code
   $('.nav-menu, .nav-close').on('click', function() {
     $('.nav-list').toggleClass('hidden');
   }); $(document).keyup(function(e) {
@@ -26,12 +45,12 @@ $(document).ready(function(){
     }
   });
 
-  /* Landing */
+  // Makes the text pop from behind Ollie
   setTimeout(function() {
     $('.landing-ollie-text').addClass('expanded');
   }, 500);
 
-  /* Testimonials */
+  // Testimonials
   function switchTestimonials() {
     $('.testimonial').each(function(i, item) {
       var t = $(item);
@@ -51,12 +70,12 @@ $(document).ready(function(){
   } switchTestimonials();
   setInterval(switchTestimonials, 48000);
 
-  /* BG Image LG */
+  // Makes the background image the same height as the columns
   function setBgImgHeight() {
     var bgImages = $('.lg-bg-img');
     for (var i = 0; i < bgImages.length; i++) {
       var item = bgImages[i];
-      console.log($(item), $(item).closest('.row').children('.lg-img-text-col'), $(item).closest('.row').children('.lg-img-text-col').height());
+      //console.log($(item), $(item).closest('.row').children('.lg-img-text-col'), $(item).closest('.row').children('.lg-img-text-col').height());
       $(item).height($(item).closest('.row').children('.lg-img-text-col').height() + 0);
     }
   } setBgImgHeight();
@@ -64,7 +83,7 @@ $(document).ready(function(){
     setBgImgHeight();
   });
 
-  // Snipcart
+  // Snipcart Code
   Snipcart.subscribe('cart.ready', function (data) {
     $('#snipcart-header').append('<div id="snip-header-int-shipping" class="text-section hidden-xs hidden-sm">For international purchases please call us at <a class="color-sec" href="tel:18003228386">1-800-FACT-FUN</a></div>');
   }); Snipcart.subscribe('cart.opened', function() {
@@ -78,6 +97,7 @@ $(document).ready(function(){
   });
 
   // Science Lesson List
+  // dependencies: List.js
   var scienceLessonList = new List('scienceLessonListWrapper', {
     valueNames: ['name', 'desc']
   });
@@ -111,4 +131,15 @@ $(document).ready(function(){
       }
     }
   });
-});
+
+  if ('serviceWorker' in navigator) {
+    console.log('CLIENT: service worker registration in progress.');
+    navigator.serviceWorker.register('/service-worker.js').then(function() {
+      console.log('CLIENT: service worker registration complete.');
+    }, function() {
+      console.log('CLIENT: service worker registration failure.');
+    });
+  } else {
+    console.log('CLIENT: service worker is not supported.');
+  }
+})

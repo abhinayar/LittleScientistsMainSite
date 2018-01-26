@@ -1,12 +1,11 @@
 /*
 Little Scientists Main Website CSS
-Written by Abhi Nayar for S-E Design Co.
+Written by Abhi Nayar for SemeErect Design Co.
 */
 
 /*
 Colors:
-  Your color library goes here
-  Light :
+  LITTLE SCIENTISTS COLOR LIBRARY
   Dark : #333
   Prim : #000489
   Sec : #febd00
@@ -15,9 +14,62 @@ Colors:
 /* FONTS */
 /* Import Circular */
 @font-face {
-  font-family: "Circular Std";
-  src: url("../../fonts/circular-medium.otf");
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-Black.eot');
+  src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Black.woff') format('woff'), url('../fonts/CircularStd-Black.ttf') format('truetype'), url('../fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 800;
+  font-style: normal;
 }
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-BlackItalic.eot');
+  src: url('../fonts/CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BlackItalic.woff') format('woff'), url('../fonts/CircularStd-BlackItalic.ttf') format('truetype'), url('../fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-Bold.eot');
+  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-BoldItalic.eot');
+  src: url('../fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BoldItalic.woff') format('woff'), url('../fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('../fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-Medium.eot');
+  src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-MediumItalic.eot');
+  src: url('../fonts/CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-MediumItalic.woff') format('woff'), url('../fonts/CircularStd-MediumItalic.ttf') format('truetype'), url('../fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-Book.eot');
+  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Book.woff') format('woff'), url('../fonts/CircularStd-Book.ttf') format('truetype'), url('../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-BookItalic.eot');
+  src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
 
 /* Global Style Resets */
 * {
@@ -231,6 +283,8 @@ span sup {
   box-shadow: 0 3px 5px rgba(0,0,0,0.4)
 } .pointer {
   cursor: pointer;
+} .to-cap {
+  text-transform: capitalize;
 }
 
 .title,
@@ -468,7 +522,7 @@ span sup {
     padding-top: 75px;
   }
 } @media (min-width: 768px) {
-  #navigation .A hero {
+  #navigation .hero {
     width: 160px;
   } #navigation.attached .nav-logo {
     width: 140px;
@@ -829,6 +883,7 @@ span sup {
   padding-top: 110px;
   width: 100%;
   background-image: url(/images/home/landingBG.png);
+  background-color: #121314;
 } #landing .ollie {
   padding: 15px;
 } #landing-ollie {
@@ -1279,7 +1334,7 @@ span sup {
 }
 @media (min-width: 768px) {
   .subpage {
-    padding-top: 155px;
+    padding-top: 80px;
   } .subpage .container.small {
     max-width: 750px;
   } .subpage .small-section .container {
@@ -1332,6 +1387,10 @@ span sup {
     width: 35px;
     left: -35px;
     top: 2px;
+  }
+} @media (min-width: 992px) {
+  .subpage {
+    padding-top: 155px;
   }
 }
 
@@ -1453,7 +1512,7 @@ span sup {
 }
 /* NGSS Matrix */
 #NGSSMatrixTable {
-  border: 4px solid #eee;
+  border: 4px solid #000489;
   overflow: scroll;
 }
 #NGSSMatrixTable td, #NGSSMatrixTable th {

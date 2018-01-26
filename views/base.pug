@@ -3,60 +3,45 @@ include ./mixins.pug
 doctype html
 html(lang="en")
   head
-    // NodeJS Boilerplate by Abhi Nayar (github.com/abhinayar)
-    // Credit not needed. Hope this is useful to a few people.
-    // If you have comments or suggestions please email anayar2[at]gmail[dot]com
-    // Connect with me on LinkedIn : https://www.linkedin.com/in/abhinayar
+    // Little Scientists Main Website 
+    // By Abhi Nayar for SemiErect Design Co.
+    // Copyright (c) 2018
+    // This work is the property of Little Scientists, Inc. and all questions should be directed at the organization above.
+    // For design inquiries please contact hello@abhi.design
     //
     // title
     //
     block headTitle
-      title Example Application
+      if (meta && meta.title)
+        title= meta.title + ' | Little Scientists - The #1 Resource For Hands-On Minds-On Education For Children Learning Science Skills & Beyond.'
+      else
+        title Little Scientists - The #1 Resource For Hands-On Minds-On Education For Children Learning Science Skills & Beyond.
     //
     // meta tags
     //
     block metaResponsive
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
-      meta(name='description', content='')
       meta(name='viewport', content='width=device-width, initial-scale=1')
+      include ./meta/main.pug
     //
     // icons
     //
     block metaIcons
-      link(rel='shortcut icon', href='/favicon.ico')
-      link(rel='apple-touch-icon-precomposed', sizes='57x57', href='/images/icons/apple-touch-icon-57.png')
-      link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/images/icons/apple-touch-icon-114.png')
-      link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/images/icons/apple-touch-icon-72.png')
-      link(rel='apple-touch-icon-precomposed', sizes='144x144', href='/images/icons/apple-touch-icon-144.png')
-      link(rel='apple-touch-icon-precomposed', sizes='60x60', href='/images/icons/apple-touch-icon-60.png')
-      link(rel='apple-touch-icon-precomposed', sizes='120x120', href='/images/icons/apple-touch-icon-120.png')
-      link(rel='apple-touch-icon-precomposed', sizes='76x76', href='/images/icons/apple-touch-icon-76.png')
-      link(rel='apple-touch-icon-precomposed', sizes='152x152', href='/images/icons/apple-touch-icon-152.png')
-      link(rel='icon', type='image/png', href='/images/icons/favicon-196.png', sizes='196x196')
-      link(rel='icon', type='image/png', href='/images/icons/favicon-96.png', sizes='96x96')
-      link(rel='icon', type='image/png', href='/images/icons/favicon-32.png', sizes='32x32')
-      link(rel='icon', type='image/png', href='/images/icons/favicon-16.png', sizes='16x16')
-      link(rel='icon', type='image/png', href='/images/icons/favicon-128.png', sizes='128x128')
-    //
-    // application meta tags
-    //
-    block metaApplication
-      meta(name='application-name', content=' ')
-      meta(name='msapplication-TileColor', content='#FFFFFF')
-      // 144x144
-      meta(name='msapplication-TileImage', content='/images/icons/ms-app-image-144.png')
-      // 70x70
-      meta(name='msapplication-square70x70logo', content='/images/icons/ms-app-image-70.png')
-      // 150x150
-      meta(name='msapplication-square150x150logo', content='/images/icons/ms-app-image-150.png')
-      // 310x150
-      meta(name='msapplication-wide310x150logo', content='/images/icons/ms-app-image-310-150.png')
-      // 310x310
-      meta(name='msapplication-square310x310logo', content='/images/icons/ms-app-image-310.png')
+      link(rel='apple-touch-icon', sizes='180x180', href='/images/icons/apple-touch-icon.png')
+      link(rel='icon', type='image/png', sizes='32x32', href='/images/icons/favicon-32x32.png')
+      link(rel='icon', type='image/png', sizes='16x16', href='/images/icons/favicon-16x16.png')
+      link(rel='manifest', href='/images/icons/manifest.json')
+      link(rel='mask-icon', href='/images/icons/safari-pinned-tab.svg', color='#000489')
+      link(rel='shortcut icon', href='/images/icons/favicon.ico')
+      meta(name='msapplication-TileColor', content='#000489')
+      meta(name='msapplication-TileImage', content='/images/icons/mstile-144x144.png')
+      meta(name='msapplication-config', content='/images/icons/browserconfig.xml')
+      meta(name='theme-color', content='#ffffff')
     //
     // sharing meta tags
     block twitterTags
+      include ./meta/twitter.pug
       // Twitter
       meta(name='twitter:card', content='summary_large_image')
       meta(name='twitter:site', content='')
@@ -75,6 +60,7 @@ html(lang="en")
       meta(name='twitter:app:id:ipad', content='')
       meta(name='twitter:app:id:googleplay', content='')
     block facebookTags
+      include ./meta/facebook.pug
       // Facebook
       meta(property='og:title', content='')
       meta(property='og:description', content='')
@@ -84,15 +70,13 @@ html(lang="en")
     // fonts
     //
     block fontFiles
-      // Roboto Google Font
-      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Montserrat:100,400,700')
+      // Circular Std. Local Font File
+      // Montserrat Fallback
     //
-    // css
+    // CSS
     //
     block externalCSS
-      // NormalizeCSS
-      link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
-      // bootstrap 3
+      // Bootstrap 3
       link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
       // Animate.CSS
       link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
@@ -104,7 +88,10 @@ html(lang="en")
       // main page CSS
       link(rel='stylesheet', href='/css/prod/app.min.css')
   body
+    // TODO: Future developer -> Implementation of BarbaJS caching interface was out of scope due to complexity of integration with e-commerce solution.
+    // If possible, integrate BarbaJS with Snipcart solution and rebuild JS.
     #barba-wrapper
+      // Body Content
       block bodyContent
     // Google Translate Code Snippet
     #google_translate_element

@@ -77,6 +77,8 @@ mixin navigation()
         ul.nav-list.c-w.hidden
           span.nav-close.pointer Close (Esc)
           li.nav-item
+            a.nav-link.snipcart-checkout.pointer(onclick="$('.nav-list').toggleClass('hidden');") Cart
+          li.nav-item
             a.nav-link#HomeNav(href='/') Home
           li.nav-item
             a.nav-link#ProductsNav(href='/products') Products & Services
