@@ -172,18 +172,17 @@ mixin contactFooter(page)
           .row
             .content-left.col-xs-12.col-sm-6
               .contact-form
-                //TODO: Contact Form
                 .row
-                  form#contact-form.wow.fadeIn
+                  form#contact-form.wow.fadeIn(action="https://formspree.io/info@little-scientists.com", method="POST")
                     .input-wrapper.col-xs-12
                       input#name(type='text', placeholder='Your Name* (required)', name='name')
                     .input-wrapper.col-xs-12
-                      input#email(type='text', placeholder='Your Email Address* (required)', name='email')
+                      input#email(type='text', placeholder='Your Email Address* (required)', name="_replyto")
                     .input-wrapper.col-xs-12
                       textarea#message(type='text', placeholder='Your Message', name='message')
                     .input-wrapper.col-xs-12
                       .btn-wrapper.wow.pulse
-                        button.shadow.button.hover-scale.solid.bg-prim(type='submit') Send Message
+                        button.shadow.button.hover-scale.solid.bg-prim(type='submit', value="Send") Send Message
             .content-right.col-xs-12.col-sm-6
               #footer
                 .footer-content.col-xs-12
