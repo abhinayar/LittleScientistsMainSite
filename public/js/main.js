@@ -132,14 +132,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
     }
   });
 
+  // register service worker
   if ('serviceWorker' in navigator) {
-    console.log('CLIENT: service worker registration in progress.');
-    navigator.serviceWorker.register('/service-worker.js').then(function() {
-      console.log('CLIENT: service worker registration complete.');
-    }, function() {
-      console.log('CLIENT: service worker registration failure.');
-    });
-  } else {
-    console.log('CLIENT: service worker is not supported.');
+  	navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+  		console.log('ServiceWorker registered with scope: ', registration.scope);
+  	}).catch(function(err) {
+  		console.log('ServiceWorker registration failed: ', err);
+  	});
   }
 })

@@ -16,56 +16,56 @@ Colors:
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-Black.eot');
-  src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Black.woff') format('woff'), url('../fonts/CircularStd-Black.ttf') format('truetype'), url('../fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Black.woff') format('woff'), url('../fonts/CircularStd-Black.ttf') format('truetype'), url('../fonts/CircularStd-Black.svg') format('svg');
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-BlackItalic.eot');
-  src: url('../fonts/CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BlackItalic.woff') format('woff'), url('../fonts/CircularStd-BlackItalic.ttf') format('truetype'), url('../fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BlackItalic.woff') format('woff'), url('../fonts/CircularStd-BlackItalic.ttf') format('truetype'), url('../fonts/CircularStd-BlackItalic.svg') format('svg');
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-Bold.eot');
-  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg') format('svg');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-BoldItalic.eot');
-  src: url('../fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BoldItalic.woff') format('woff'), url('../fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('../fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BoldItalic.woff') format('woff'), url('../fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('../fonts/CircularStd-BoldItalic.svg') format('svg');
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-Medium.eot');
-  src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-MediumItalic.eot');
-  src: url('../fonts/CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-MediumItalic.woff') format('woff'), url('../fonts/CircularStd-MediumItalic.ttf') format('truetype'), url('../fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-MediumItalic.woff') format('woff'), url('../fonts/CircularStd-MediumItalic.ttf') format('truetype'), url('../fonts/CircularStd-MediumItalic.svg') format('svg');
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-Book.eot');
-  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Book.woff') format('woff'), url('../fonts/CircularStd-Book.ttf') format('truetype'), url('../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Book.woff') format('woff'), url('../fonts/CircularStd-Book.ttf') format('truetype'), url('../fonts/CircularStd-Book.svg') format('svg');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'CircularStd';
   src: url('../fonts/CircularStd-BookItalic.eot');
-  src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg') format('svg');
   font-weight: 400;
   font-style: italic;
 }
@@ -83,7 +83,7 @@ body {
   overflow-x: hidden !important;
   position: relative;
   font-size: 14px !important;
-  font-family: 'Circular Std', 'Montserrat', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Circular Std', 'Montserrat', 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 } @media (min-width: 540px) {
@@ -1181,6 +1181,12 @@ span sup {
   } .lg-img-text-col,
   .lg-img-col {
     padding: 0;
+  }
+} @media (min-width: 1200px) {
+  #homeTwoCol .text-section {
+    padding: 90px 0 120px 0;
+    max-width: 460px;
+    margin: 0 auto;
   } #homeTwoCol .image-section {
     background-size: auto 98%;
     background-color: #fff;
@@ -1189,19 +1195,10 @@ span sup {
     position: relative;
     z-index: 2;
     background-image: url(/images/home/lgImage1.png);
-  } #homeTwoCol .image-section.two {
-    background-position: right 90px;
-    background-image: url(/images/home/lgImage2.png);
-  }
-} @media (min-width: 1200px) {
-  #homeTwoCol .text-section {
-    padding: 90px 0 120px 0;
-    max-width: 460px;
-    margin: 0 auto;
-  } #homeTwoCol .image-section {
     background-position: left 15px;
     max-height: 660px;
   } #homeTwoCol .image-section.two {
+    background-image: url(/images/home/lgImage2.png);
     background-position: right 15px;
   }
 }
@@ -1582,7 +1579,7 @@ span sup {
   }
 }
 
-/* Snipcart */
+/* Snipcart CSS */
 .snip-layout {
   margin-top: 80px;
   box-shadow: 0 3px 5px rgba(0,0,0,0.4);

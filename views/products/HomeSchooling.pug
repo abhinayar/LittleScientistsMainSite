@@ -3,44 +3,56 @@ extends ../base.pug
 append bodyContent
   #productSubpage.barba-container.container-fluid.relative.subpage(data-namespace='ProductsNav')
     +navigation()
-    #corporatePartnership.page-section.large-section.top-section.white.section-icon
+    #homeSchooling.page-section.large-section.top-section.white.section-icon
       .container
         .row
           .title-section.col-xs-12
             .title.wow.fadeIn
-              h3.c-prim In-School&nbsp;
-                span.c-sec.new-line Field Trips
+              h3.c-prim Home&nbsp;
+                span.c-sec.new-line Schooling
             .link-icon.wow.slideInRight
               .icon.icon-image
                 img(src='/images/common/rightIcons1.png', alt="Little Scientists")
       .container.small
         .row
           .content-section.no-push.col-xs-12
-            .text-section.wow.fadeIn.c-light.xl
-              .xl.bold.c-dark.wow.fadeIn Little Scientists® has over 450 hands-on, minds-on, inquiry & practice based science lessons. These lessons can be taught as an In-School Field Trip where a Little Scientists® certified teacher brings the manual, and all consumable and durable materials to your classroom.
+            .image-section.page-item.no-margin
+              .image-wrapper.wow.fadeIn
+                img(src='/images/products/HomeSchooling/1.png', alt='Professional Development')
+            .text-section.wow.fadeIn.page-item.c-light.xl
+              .xl.bold.c-dark.wow.fadeIn Are you a parent that home schools your child?
               br
-              a.reg-link(href='#Contact') Sign Up Your Classroom!
+              span If so, we are now offering our&nbsp;
+                a.reg-link(href="/products/CurriculumUnits") curriculum products
+                | ,&nbsp;
+                a.reg-link(href="/products/ScienceSupplies") learn-at-home-kits
+                | , and&nbsp;
+                a.reg-link(href="/products/ScienceSupplies") hands-on activity
+                | &nbsp;books to home school students.
               br
               br
-              span The Little Scientists® teacher will spend 1 class period engaging your students in the science topic you have chosen for them. To choose a lesson topic for your classroom&nbsp;
-                a(href='/products/ScienceLessons') search your topic of interest on our science lessons page.
+              span The curriculum products include a teacher’s manual, and all consumable and durable materials. All lessons are inquiry based, teacher friendly, and are specifically aligned with the new Next Generation Science Standards.
               br
               br
-              a.reg-link(href='#Contact') Sign Up Your Facility!
-    #Contact.page-section.large-section.less-padding.blue.text-left.icon-right.relative
+              span Any questions, please email us at&nbsp;
+                a.reg-link(href="mailto:education@little-scientists.com") education@little-scientists.com
+              br
+              br
+              a.reg-link.xl(href='#Contact') Sign up your homeschool group!
+    #Contact.page-section.large-section.less-padding.blue.text-left.icon-right.relative.dark-contact
       .container
         .row
           .title-section.col-xs-12
             .title
               h3
-                span.c-w Sign Up&nbsp;
-                span.c-sec.new-line Your Classroom!
+                span.c-w Sign Up Your&nbsp;
+                span.c-sec.new-line Homeschool Group!
         .row
           .no-push.col-xs-12
             .text-section.c-w
-              .xl.bold.wow.fadeIn Use this form to sign up your classroom or your school for In-School Field Trip(s)! Or call us at&nbsp;
-                a.c-sec(href='tel:18003228386') 1-800-FACT-FUN&nbsp;
-                | or sign up here, and a Little Scientists representative will contact you as soon as possible.
+              .xl.wow.fadeIn Please include in your message &nbsp;
+                span.bold any relevant details
+                | &nbsp;about your child/children, their current status and future needs as well as any product questions you may have for us!
             .row.content-section
               .top-section.content-left.col-xs-12.col-sm-6
                 .contact-form.c-w
@@ -52,7 +64,7 @@ append bodyContent
                       .input-wrapper.col-xs-12
                         input#email(type='text', placeholder='Your Email Address* (required)', name='email')
                       .input-wrapper.col-xs-12
-                        textarea.c-dark#message(type='text', placeholder='Your Message', name='message')
+                        textarea.c-dark#message(type='text', placeholder='Please Include The Information Requested Above* (required)', name='message')
                       .input-wrapper.col-xs-12
                         .btn-wrapper.wow.pulse
                           button.shadow.button.hover-scale.solid.bg-sec(type='submit') Send Message
@@ -68,6 +80,6 @@ append bodyContent
                       span.email.footer-item Email:&nbsp;
                         a(href='mailto:info@little-scientists.com') info@little-scientists.com
                       span.copyright.footer-item
-                        | Copyright © 2017, Little Scientists Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
+                        | Copyright © 2018, Little Scientists Inc. All logos, brands, and trade names are Registered Trademarks of their Respective Owners.
                     .footer-designer
                       a.footer-designer-link(href='https://linkedin.com/in/abhinayar') Designed By Abhi Nayar

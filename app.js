@@ -29,7 +29,8 @@ app.use(logger('dev')); // uses morgan/logger to log output to terminal
 app.use(bodyParser.json()); // uses bodyParser to parse req
 app.use(bodyParser.urlencoded({ extended : true })); // Parses the text as URL encoded data, extended extends UTF chars
 app.use(cookieParser('secret')); // sets the session secret
-// set up session storage (we dont really need this for this app, no login)
+// set up session storage
+// No session storage setup - FUTURE DEV NOTE: May want to set up Redis, FirebaseStore or other persistent session storage mech.
 app.use(session({
   secret: 'secret',
   resave: false,
@@ -53,14 +54,15 @@ app.use(function (req, res, next) {
 });
 if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
-    res.render('error', { 
+    res.render('error', {
       meta : {
         title: '404 Page Not Found'
       }
     })
   });
 }
-app.use(function (err, req, res, next) { // eslint-disable-line no-unused-vars
+app.use(function (err, req, res, next) {
+  // eslint-disable-line no-unused-vars
   res.status(err.status || 404);
   // log the error for heroku logs
   console.log('error', err);

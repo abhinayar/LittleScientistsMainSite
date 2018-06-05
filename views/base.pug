@@ -3,7 +3,7 @@ include ./mixins.pug
 doctype html
 html(lang="en")
   head
-    // Little Scientists Main Website 
+    // Little Scientists Main Website
     // By Abhi Nayar for SemiErect Design Co.
     // Copyright (c) 2018
     // This work is the property of Little Scientists, Inc. and all questions should be directed at the organization above.
@@ -120,6 +120,19 @@ html(lang="en")
     link(href='https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css', type='text/css', rel='stylesheet')
     // Local Scripts
     block localScripts
+    // Unregister Service Worker
+    script.
+      'use strict';
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration().then(function(registration) {
+          if (registration) {
+            registration.unregister().then(function(bool) {
+              console.log('SW unregistered :', bool);
+            })
+          }
+        });
+      }
     // Start of Async Drift Code
     script(defer).
       !function() {

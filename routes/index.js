@@ -1,6 +1,6 @@
 // This file contains the global routing for the Little Scientists Application
 // This could be abstracted into multiple files- future developer note
-// Currently it's sitting at an unminfied 100 lines of code, which is small enough to justify leaving. 
+// Currently it's sitting at an unminfied 100 lines of code, which is small enough to justify leaving.
 // By Abhi Nayar for SemiErect Design Co.
 //
 //
@@ -40,6 +40,8 @@ setInterval(function() {
 }, 1000 * 60 * 15)
 // This function will fire every 15 minutes
 // Changes will take ~15-20 minutes from time of change in GSheet to propogate
+//
+//
 //
 //
 // Home Page: '/' or 'https://little-scientists.com'
