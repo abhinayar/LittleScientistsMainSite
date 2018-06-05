@@ -131,13 +131,4 @@ document.addEventListener('DOMContentLoaded', function(e) {
       }
     }
   });
-
-  // register service worker
-  if ('serviceWorker' in navigator) {
-  	navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-  		console.log('ServiceWorker registered with scope: ', registration.scope);
-  	}).catch(function(err) {
-  		console.log('ServiceWorker registration failed: ', err);
-  	});
-  }
 })
