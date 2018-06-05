@@ -15,33 +15,27 @@ Colors:
 /* Import Circular */
 @font-face {
   font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-Bold.eot');
-  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-BoldItalic.eot');
-  src: url('../fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BoldItalic.woff') format('woff'), url('../fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('../fonts/CircularStd-BoldItalic.svg') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-Book.eot');
-  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Book.woff') format('woff'), url('../fonts/CircularStd-Book.ttf') format('truetype'), url('../fonts/CircularStd-Book.svg') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-BookItalic.eot');
-  src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg') format('svg');
-  font-weight: 400;
-  font-style: italic;
+  src: url('../fonts/CircularStd-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/CircularStd-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/CircularStd-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/CircularStd-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/CircularStd-Bold.svg') format('svg'); /* Legacy iOS */
+ font-weight: 700;
+ font-style: normal;
 }
 
+@font-face {
+  font-family: 'CircularStd';
+  src: url('../fonts/CircularStd-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/CircularStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/CircularStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/CircularStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/CircularStd-Book.svg') format('svg'); /* Legacy iOS */
+ font-weight: 400;
+ font-style: normal;
+}
 
 /* Global Style Resets */
 * {
