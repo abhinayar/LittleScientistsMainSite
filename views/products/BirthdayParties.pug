@@ -68,9 +68,9 @@ append bodyContent
                   .row
                     form#contact-form.wow.fadeIn(action="https://formspree.io/info@little-scientists.com", method="POST")
                       .input-wrapper.col-xs-12
-                        input#name(type='text', placeholder='Your Name* (required)', name='name')
+                        input#name(type='text', placeholder='Your Name* (required)', name='name', autocomplete='name')
                       .input-wrapper.col-xs-12
-                        input#email(type='text', placeholder='Your Email Address* (required)', name="_replyto")
+                        input#email(type='text', placeholder='Your Email Address* (required)', name="_replyto", autocomplete='email')
                       .input-wrapper.col-xs-12
                         textarea.c-dark#message(type='text', placeholder='Please Include The Information Requested Above* (required)', name='message')
                       .input-wrapper.col-xs-12
