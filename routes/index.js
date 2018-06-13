@@ -194,7 +194,7 @@ router.get('/login', function(req, res, next) {
       msg = query.message;
     }
 
-    res.render('login', {
+    res.render('Login', {
       message : msg || null,
       meta : {
         title: 'Login To Little Scientists'
