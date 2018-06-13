@@ -2,15 +2,16 @@ extends ./base.pug
 
 append bodyContent
   // Global Site Banner
-  #banner.bg-prim.c-w.pointer.relative
-    a.banner-wrapper.c-w(href='#Contact')
-      .container.relative
-        .row
-          .banner-text.col-xs-12.col-md-9
-            span.text Our World class NEXT GENERATION LITTLE SCIENTISTS ® “rolls out” on January 20th. HELP US CELEBRATE OUR 25th ANNIVERSARY YEAR!! Please join us for a celebration kickoff...
-          .banner-link.col-xs-12.col-md-3.text-right.c-sec
-            a.c-sec(href='#Contact') Find Out More&nbsp;
-              +arrow()
+  if (data)
+    #banner.bg-prim.c-w.pointer.relative
+      a.banner-wrapper.c-w(href='#Contact')
+        .container.relative
+          .row
+            .banner-text.col-xs-12.col-md-9!= data[0].crawl_text
+              span.text
+            .banner-link.col-xs-12.col-md-3.text-right.c-sec
+              a.c-sec(href='#Contact') Find Out More&nbsp;
+                +arrow()
   #home.barba-container.container-fluid.relative(data-namespace='HomeNav')
     +navigation()
     #landing.page-section.home-landing.title-left.image-right.container-fluid.bg-cover.bg-center.bg-no-repeat
@@ -58,7 +59,7 @@ append bodyContent
             span.text.d-i-block To empower students & teachers, through the highest quality of hands-on learning, to participate in science within the classroom and beyond.
             .btn-wrapper.btn-solid-line
               a.button.btn-one.hover-scale.solid.bg-sec.bold(href='/about') About Us
-              a.button.btn-two.hover-scale.lined.bold(href='/about#OurMissionDetail') Our History
+              a.button.btn-two.hover-scale.lined.bold(href='/about#aboutMission') Our Mission
     #homeProducts.page-section.less-padding.large-section.white.title-left.link-right.section-icon
       .container
         .row

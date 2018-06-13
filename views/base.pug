@@ -72,6 +72,7 @@ html(lang="en")
     block fontFiles
       // Circular Std. Local Font File
       // Montserrat Fallback
+      link(href="https://fonts.googleapis.com/css?family=Poppins:400,700", rel="stylesheet")
     //
     // CSS
     //
@@ -86,7 +87,9 @@ html(lang="en")
         link(rel='stylesheet', href='/css/vendor/bootstrap.min.css')
     block localCSS
       // main page CSS
-      link(rel='stylesheet', href='/css/prod/app.min.css')
+      //link(rel='stylesheet', href='/css/prod/app.min.css')
+      link(rel='stylesheet', href='/css/main.css')
+
   body
     // TODO: Future developer -> Implementation of BarbaJS caching interface was out of scope due to complexity of integration with e-commerce solution.
     // If possible, integrate BarbaJS with Snipcart solution and rebuild JS.
@@ -97,7 +100,7 @@ html(lang="en")
     #google_translate_element
     script(type='text/javascript').
       function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
       }
     script(type='text/javascript', src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit')
 

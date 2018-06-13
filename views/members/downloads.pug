@@ -1,0 +1,21 @@
+extends ../base.pug
+
+append bodyContent
+  #members.barba-container.container-fluid.relative.subpage(data-namespace='MembersNav')
+    +navigation()
+    #aboutSectionOne.page-section.large-section.top-section.white
+      .container
+        .row
+          .title-section.col-xs-12
+            .title.wow.fadeIn
+              h3 Members&nbsp;
+                span.c-sec.new-line Area
+            .link-icon
+              .icon.icon-image
+                img(src='/images/common/rightIcons2.png', alt="Little Scientists")
+      .container.small
+        .row
+          .content-section.no-push.col-xs-12
+            .text-section
+              .xl.bold.wow.fadeIn.c-dark.wow.fadeIn Download Little Scientists programs, brochures and class handouts here. Thank you for your support of Little Scientists.
+    +contactFooter()

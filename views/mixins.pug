@@ -88,25 +88,34 @@ mixin navigation()
             a.nav-link#AboutNav(href='/about') About Us
           li.nav-item
             a.nav-link#ContactNav(href='#Contact') Contact Us
-          li.nav-item
-            a.nav-link#LoginNav(href='/login') Login
+          if (!user)
+            li.nav-item
+              a.nav-link#LoginNav(href='/login') Login
+          else
+            li.nav-item
+              a.nav-link#LogoutNav(href='/logout') Logout
       .desktop-nav.hidden-xs.hidden-sm
         .nav-logo
           a(href='/')
             img(src='/images/common/logo_main.png', alt='Little Scientists - Home')
         .top-nav
           ul.top-nav-list
-            li.top-nav-item
-              a(href='mailto:info@little-scientists.com')
-                span.icon
-                  // TODO Insert Icon
-                span.text info@little-scientists.com
-            li.top-nav-item.phone
-              // TODO inset tel
-              a.bold(href='tel:')
-                span.icon
-                  // TODO Insert Icon
-                span.text 1-800-FACT-FUN
+            if (!user)
+              li.top-nav-item
+                a(href='mailto:info@little-scientists.com')
+                  span.icon
+                    // TODO Insert Icon
+                  span.text info@little-scientists.com
+              li.top-nav-item.phone
+                // TODO inset tel
+                a.bold(href='tel:')
+                  span.icon
+                    // TODO Insert Icon
+                  span.text 1-800-FACT-FUN
+            else
+                li.top-nav-item.no-icon
+                  a(href='/members')
+                    span.text GO TO MEMBERS AREA &rarr;
             li.top-nav-item.cart
               // TODO inset tel
               a.bold.snipcart-checkout.pointer
@@ -152,8 +161,12 @@ mixin navigation()
               a.nav-link#AboutNav(href='/about') About Us
             li.nav-item
               a.nav-link#ContactNav(href='#Contact') Contact Us
-            li.nav-item
-              a.nav-link#LoginNav(href='/login') Login
+            if (!user)
+              li.nav-item
+                a.nav-link#LoginNav(href='/login') Login
+            else
+              li.nav-item
+                a.nav-link#LogoutNav(href='/logout') Logout
 
 mixin contactFooter(page)
   #Contact.page-section.large-section.less-padding.off.text-left.icon-right.relative

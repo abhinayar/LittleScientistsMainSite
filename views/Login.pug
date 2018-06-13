@@ -15,6 +15,10 @@ append bodyContent
           .content-section.no-push.col-xs-12.no-padding
             form#loginForm.bg-white.text-center.page-item.top-item(action='POST', role='form', autocomplete='on')
               .text-section
+                if (message)
+                  span.lg.bold(style="color: red")!= message
+                  br
+                  br
                 span.lg.bold.c-dark Enter your username &amp; password for access to the members section. For help call us at&nbsp;
                   a.c-sec(href='tel:18003228386') 1-800-FACT-FUN&nbsp;
                   | &nbsp;or&nbsp;
@@ -29,3 +33,32 @@ append bodyContent
             br
             br
     +contactFooter()
+
+append localScripts
+  script.
+    $('#membersSubmit').on('click', function(e) {
+      e.preventDefault();
+      let uname = $('#membersUname').val(),
+      pwd = $('#membersPwd').val();
+
+      if (!uname || uname.length <= 0) {
+        alert("You must enter a username!")
+      } else if (!pwd || pwd.length <= 0) {
+        alert("You must enter a password!");
+      } else {
+        $.ajax({
+          type: "POST",
+          url: "/login",
+          data: { pwd : pwd },
+          success : successCb
+        });
+      }
+    })
+
+    function successCb(data) {
+      console.log(data)
+      if (data) {
+        let url = data.url;
+        window.location.href = url;
+      }
+    }

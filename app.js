@@ -32,10 +32,9 @@ app.use(cookieParser('secret')); // sets the session secret
 // set up session storage
 // No session storage setup - FUTURE DEV NOTE: May want to set up Redis, FirebaseStore or other persistent session storage mech.
 app.use(session({
-  secret: 'secret',
+  secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
+  saveUninitialized: false
 }));
 app.use(express.static(path.join(__dirname, 'public'))); // sets static file directory path
 app.use(compression()); // uses compression
@@ -54,6 +53,7 @@ app.use(function (req, res, next) {
 });
 if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
+    console.log(err);
     res.render('error', {
       meta : {
         title: '404 Page Not Found'

@@ -10,7 +10,7 @@ refresh = require('gulp-refresh');
 
 var banner = ['/**',
     ' * Little Scientists Website Static Assets',
-    ' * (c) 2017 Abhi Nayar for SemiErect Design Co.',
+    ' * (c) 2018 Abhi Nayar for SemiErect Design Co.',
     ' * Last Updated: <%= new Date().toUTCString() %>',
     ' * Please contact hello[at]abhi.design with questions',
     ' */',
