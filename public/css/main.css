@@ -13,34 +13,6 @@
 */
 
 /*
-  FONTS
-  Import Circular Std - Lineto
-*/
-@font-face {
-  font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-Bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/CircularStd-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/CircularStd-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/CircularStd-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/CircularStd-Bold.svg') format('svg'); /* Legacy iOS */
- font-weight: 700;
- font-style: normal;
-}
-
-@font-face {
-  font-family: 'CircularStd';
-  src: url('../fonts/CircularStd-Book.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/CircularStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/CircularStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/CircularStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/CircularStd-Book.svg') format('svg'); /* Legacy iOS */
- font-weight: 400;
- font-style: normal;
-}
-
-/*
   Global Style Resets
 */
 * {
@@ -62,7 +34,7 @@ body {
   overflow-x: hidden !important;
   position: relative;
   font-size: 14px !important;
-  font-family: 'Circular Std', 'Poppins', 'Montserrat', 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, sans-serif !important;
+  font-family: 'Poppins', 'Circular Std', 'Montserrat', 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, sans-serif !important;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 } @media (min-width: 540px) {
@@ -941,7 +913,7 @@ span sup {
 } @media (min-width: 1200px) {
   #landing h1 {
     margin-top: 60px;
-    font-size: 52px;
+    font-size: 51px;
     padding-right: 120px;
   } #landing .ollie {
     margin-top: 75px;
